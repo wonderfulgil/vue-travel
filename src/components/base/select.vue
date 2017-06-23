@@ -1,10 +1,10 @@
 <template>
-	<div class="select" v-on:mouseenter="borderChange" v-on:mouseleave="borderChange">
+	<div class="select" v-on:mouseenter="enterChange" v-on:mouseleave="leaveChange">
         <p class="select-result">
             <span :class="{black:isHight}">{{ selector[nowIndex]}}</span>
             <i :class="[isActive ? xxsj:xssj]"></i>
         </p>				  
-    	<ul class="select-bar" >
+    	<ul class="select-bar" v-show="!isActive">
     		<li v-for="(item,index) in selector" @click="show(index)">{{item}}</li>
         </ul>
 	</div>
@@ -17,7 +17,7 @@
               isHight:false,
               xxsj:"boder_xxsj",
               xssj:"boder_xssj",
-              nowIndex: 0
+              nowIndex: "0"
         	}
         },
         props: ["selector"],
@@ -26,9 +26,13 @@
                 this.nowIndex = index,
                 this.isHight=true,
                 this.$emit("onChange",this.nowIndex)
+                this.leaveChange()
             },
-            borderChange(){
-                this.isActive=!this.isActive
+            enterChange(){
+                this.isActive=false
+            },
+            leaveChange(){
+                this.isActive=true
             },
          }
       }
@@ -74,15 +78,11 @@
         position: absolute;
         left: 0px;
         top: 31px;
-        display: none;
         width: 100%;
         background: #fff;
         border: 1px solid #e5e5e5;
         z-index: 99999;
         zoom: 1;
-    }
-    .select:hover .select-bar {
-        display: block;
     }
     .select-bar li {
         cursor: pointer;

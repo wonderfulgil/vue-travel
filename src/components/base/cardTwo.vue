@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{path: '/detail/'+ mycard.toKey}">
+    <router-link :to="{path:'/detail/'+ mycard.toKey}">
         <div class="card-picture">
             <img :src="mycard.img" width="224" height="157">
             <div class="hover-box">
@@ -10,7 +10,6 @@
           <p class="card-price">
           <span><i>¥</i><b> {{mycard.price }}</b>起</span>
         </p> 
-        </a>
     </router-link>              
 </template>
 <script type="text/javascript"> 
@@ -52,13 +51,12 @@ export default {
     }
     .hover-box p {
         color: #fff;
-        height: auto;
-        line-height: 20px;
         margin-top: 40px;
         width: 204px;
         font-size: 14px;
         line-height: 18px;
         padding: 0px 10px;
+        height: 107px;
         overflow: hidden;
     }
     .card-name {

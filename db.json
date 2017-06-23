@@ -1,39 +1,39 @@
  {
         "navs":[
-            {"id":"1","title":"首页","url":"/index"},
-            {"id":"2","title":"周边游","url":"/travel/zhoubianyou"},
-            {"id":"3","title":"国内游","url":"/travel/guoneiyou"},
-            {"id":"4","title":"自由行","url":"/travel/ziyouxing"},
-            {"id":"5","title":"出境游","url":"/travel/chujingyou"}],
+            {"id":"1","title":"周边游","url":"/travel/around"},
+            {"id":"2","title":"国内游","url":"/travel/domestic"},
+            {"id":"3","title":"自由行","url":"/travel/selftrip"},
+            {"id":"4","title":"出境游","url":"/travel/abroad"}],
         "list":[
             {
                 "title":"周边游",
                 "id":"1",
+                "key":"around",
                 "twoLevel":[
-                    {"id":"1","title":"法国1","key":"1"},
-                    {"id":"2","title":"德国1","key":"2"},
-                    {"id":"3","title":"瑞士1","key":"3"},
-                    {"id":"4","title":"意大利1","key":"4"}
+                    {"id":"1","title":"一、二日游","key":"yieryou"},
+                    {"id":"2","title":"三、四日游","key":"sansiyou"},
+                    {"id":"3","title":"五日及以上","key":"fivemoreyou"}
                 ],
                 "contents":[
                     {
                         "id":"1",
-                        "title":"周边游",
+                        "title":"一、二日游",
+                        "key":"yieryou",
                         "threeLevel":[
-                            {"id":"1","title":"法国","key":"5","ishot":true},
-                            {"id":"2","title":"德国","key":"6","ishot":false},
-                            {"id":"3","title":"瑞士","key":"7","ishot":true},
-                            {"id":"4","title":"意大利","key":"8","ishot":false}
+                            {"id":"1","title":"黄山","key":"huangshan","ishot":true},
+                            {"id":"2","title":"南京","key":"nanjing","ishot":false},
+                            {"id":"3","title":"芜湖","key":"wuhu","ishot":true}
                         ]
                     },
                     {
                         "id":"2",
-                        "title":"周边游2",
+                        "key":"sansiyou",
+                        "title":"三、四日游",
                         "threeLevel":[
-                            {"id":"1","title":"法国2","key":"9","ishot":true},
-                            {"id":"2","title":"德国2","key":"10","ishot":true},
-                            {"id":"3","title":"瑞士2","key":"11","ishot":false},
-                            {"id":"4","title":"意大利2","key":"12","ishot":false}
+                            {"id":"1","title":"泰州","key":"taizhou","ishot":true},
+                            {"id":"2","title":"张家界","key":"zhangjiajie","ishot":true},
+                            {"id":"3","title":"黄山","key":"huangshan","ishot":false},
+                            {"id":"4","title":"桂林","key":"guilin","ishot":false}
                         ]
                     }
                 ]               
@@ -41,31 +41,40 @@
             {
                 "title":"国内游",
                 "id":"2", 
+                "key":"domestic",
                 "twoLevel":[
-                    {"id":"1","title":"法国2","key":"13"},
-                    {"id":"2","title":"德国2","key":"14"},
-                    {"id":"3","title":"瑞士2","key":"15"},
-                    {"id":"4","title":"意大利2","key":"16"}
+                    {"id":"1","title":"西藏/新疆","key":"TX"},
+                    {"id":"2","title":"云南/四川","key":"YS"},
+                    {"id":"3","title":"浪漫海南","key":"hainan"}
                 ],
                 "contents":[
                     {
                         "id":"1",
-                        "title":"国内游",
+                        "title":"西藏/新疆",
+                        "key":"TX",
                         "threeLevel":[
-                            {"id":"1","title":"法国","key":"17","ishot":false},
-                            {"id":"2","title":"德国","key":"18","ishot":false},
-                            {"id":"3","title":"瑞士","key":"19","ishot":true},
-                            {"id":"4","title":"意大利","key":"20","ishot":true}
+                            {"id":"1","title":"拉萨","key":"lhasa","ishot":false},
+                            {"id":"2","title":"吐鲁番","key":"turpan","ishot":false},
+                            {"id":"3","title":"天池","key":"HeavenPool","ishot":true}
                         ]
                     },
                     {
                         "id":"2",
-                        "title":"国内游2",
+                        "title":"云南/四川",
+                        "key":"YS",
                         "threeLevel":[
-                            {"id":"1","title":"法国2","key":"21","ishot":true},
-                            {"id":"2","title":"德国2","key":"22","ishot":false},
-                            {"id":"3","title":"瑞士2","key":"23","ishot":false},
-                            {"id":"4","title":"意大利2","key":"24","ishot":true}
+                            {"id":"1","title":"丽江","key":"lijiang","ishot":true},
+                            {"id":"2","title":"香格里拉","key":"shangri-La","ishot":false},
+                            {"id":"3","title":"大理","key":"dali","ishot":false}
+                        ]
+                    },
+                    {
+                        "id":"3",
+                        "title":"浪漫海南",
+                        "key":"hainan",
+                        "threeLevel":[
+                            {"id":"1","title":"三亚","key":"sanya","ishot":true},
+                            {"id":"2","title":"蜈支洲岛","key":"Wuzhizhou","ishot":false}
                         ]
                     }
                 ]           
@@ -73,31 +82,31 @@
             {
                 "title":"自由行",
                 "id":"3",
+                "key":"selftrip",
                 "twoLevel":[
-                    {"id":"1","title":"法国3","key":"25"},
-                    {"id":"2","title":"德国3","key":"26"},
-                    {"id":"3","title":"瑞士3","key":"27"},
-                    {"id":"4","title":"意大利3","key":"28"}
+                    {"id":"1","title":"出境自助游", "key":"selftrip-chujing"},
+                    {"id":"2","title":"国内自助游","key":"selftrip-domestic"}
                 ],
                 "contents":[
                     {
                         "id":"1",
-                        "title":"自由行",
+                        "title":"出境自助游",
+                        "key":"selftrip-chujing",
                         "threeLevel":[
-                            {"id":"1","title":"法国","key":"29","ishot":true},
-                            {"id":"2","title":"德国","key":"30","ishot":true},
-                            {"id":"3","title":"瑞士","key":"31","ishot":false},
-                            {"id":"4","title":"意大利","key":"32","ishot":false}
+                            {"id":"1","title":"日本","key":"japan","ishot":true},
+                            {"id":"2","title":"香港","key":"HongKong","ishot":true},
+                            {"id":"3","title":"马尔代夫","key":"maldives","ishot":false},
+                            {"id":"4","title":"巴厘岛","key":"bali","ishot":false}
                         ]
                     },
                     {
                         "id":"2",
-                        "title":"自由行2",
+                        "title":"国内自助游",
+                        "key":"selftrip-domestic",
                         "threeLevel":[
-                            {"id":"1","title":"法国2","key":"33","ishot":true},
-                            {"id":"2","title":"德国2","key":"34","ishot":false},
-                            {"id":"3","title":"瑞士2","key":"35","ishot":false},
-                            {"id":"4","title":"意大利2","key":"36","ishot":false}
+                            {"id":"1","title":"三亚","key":"sanya","ishot":true},
+                            {"id":"2","title":"厦门","key":"xiamen","ishot":false},
+                            {"id":"3","title":"昆明","key":"kunming","ishot":false}
                         ]
                     }
                 ]                                       
@@ -105,37 +114,1640 @@
             {
                 "title":"出境游",
                 "id":"4",
+                "key":"abroad",
                 "twoLevel":[
-                    {"id":"1","title":"法国4","key":"37"},
-                    {"id":"2","title":"德国4","key":"38"},
-                    {"id":"3","title":"瑞士4","key":"39"},
-                    {"id":"4","title":"意大利4","key":"40"}
+                    {"id":"1","title":"东南亚风情","key":"SoutheastAsia"},
+                    {"id":"2","title":"澳非探秘","key":"Macao"},
+                    {"id":"3","title":"欧美大国","key":"EuropeAmerica"}
                 ],
                 "contents":[
                     {
                         "id":"1",
-                        "title":"出境游",
+                        "title":"东南亚风情",
+                        "key":"SoutheastAsia",
                         "threeLevel":[
-                            {"id":"1","title":"法国","key":"41","ishot":true},
-                            {"id":"2","title":"德国","key":"42","ishot":false},
-                            {"id":"3","title":"瑞士","key":"43","ishot":true},
-                            {"id":"4","title":"意大利","key":"44","ishot":false}
+                            {"id":"1","title":"新加坡","key":"singapore","ishot":true},
+                            {"id":"2","title":"泰国","key":"thailand","ishot":false},
+                            {"id":"3","title":"马尔代夫","key":"maldives","ishot":true},
+                            {"id":"4","title":"尼泊尔","key":"nepal","ishot":false}
                         ]
                     },
                     {
                         "id":"2",
-                        "title":"出境游2",
+                        "title":"澳非探秘",
+                        "key":"Macao",
                         "threeLevel":[
-                            {"id":"1","title":"法国2","key":"46","ishot":true},
-                            {"id":"2","title":"德国2","key":"47","ishot":true},
-                            {"id":"3","title":"瑞士2","key":"48","ishot":false},
-                            {"id":"4","title":"意大利2","key":"49","ishot":false}
+                            {"id":"1","title":"澳大利亚","key":"australia","ishot":true},
+                            {"id":"2","title":"土耳其","key":"turkey","ishot":true},
+                            {"id":"3","title":"迪拜","key":"dubai","ishot":false},
+                            {"id":"4","title":"阿拉伯","key":"arab","ishot":false}
+                        ]
+                    },
+                    {
+                        "id":"3",
+                        "title":"欧美大国",
+                        "key":"EuropeAmerica",
+                        "threeLevel":[
+                            {"id":"1","title":"俄罗斯","key":"russia","ishot":true},
+                            {"id":"2","title":"意大利","key":"Italy","ishot":true},
+                            {"id":"3","title":"美国","key":"USA","ishot":false},
+                            {"id":"4","title":"黄石公园","key":"yellowstone","ishot":false}
                         ]
                     }
                 ]                   
             }
         ],
-        "selector":["周边游","国内行","自由行","出境游"],
+        "indexlist":[
+                  {
+                    "id":"1",
+                    "title":"周边游",
+                    "key":"around",
+                    "sideimgs":"/static/pic2.jpg",
+                    "sideimages":"/static/ad1.jpg",
+                    "destination":[
+                        {"id":"1","title":"黄山","key":"huangshan"},
+                        {"id":"2","title":"江苏","key":"jiangsu"},
+                        {"id":"3","title":"北京","key":"beijing"},
+                        {"id":"4","title":"张家界","key":"zhuangjiajie"},
+                        {"id":"5","title":"桂林","key":"guilin"},
+                        {"id":"6","title":"青岛","key":"qingdao"},
+                        {"id":"7","title":"昆明","key":"kunming"}
+                    ],
+                    "tabs":["一、二日游","三、四日游","五日及以上"],
+                    "tabContent":[
+                        {
+                            "bigimg":{
+                                "img":"/static/12.jpg",
+                                "toKey":"100"
+                            },
+                            "card":[
+                                {
+                                   "toKey":"1",
+                                    "img":"/static/11.jpeg",
+                                    "name":"<南京中山陵-玄武湖-夫子庙1日游>合肥出发、含中餐，家庭游亲子游学生游均可，周末踏春美食休闲之旅、纯玩无购物 ",
+                                    "price":"106" 
+                                },
+                                {
+                                  "toKey":"2",
+                                    "img":"/static/21.jpg",
+                                    "name":"<无锡太湖鼋头渚荷花季-太湖游船-三国城水浒城1日游>享评弹表演及无锡特色小礼品一份 纯玩0购物",
+                                    "price":"237" 
+                                },
+                                {
+                                   "toKey":"3",
+                                    "img":"/static/14.jpg",
+                                    "name":"<芜湖方特四期东方神画1日游>一个有故事的主题乐园 重磅回归 一票制 0购物 全园嗨翻天",
+                                    "price":"185" 
+                                },
+                                {
+                                    "toKey":"4",
+                                    "img":"/static/15.jpg",
+                                    "name":"<南昌万达主题乐园1日游>含主题乐园大门票，专车专导，每人一瓶矿泉水",
+                                    "price":"259" 
+                                },
+                                {
+                                   "toKey":"5",
+                                    "img":"/static/16.jpg",
+                                    "name":"<千岛湖-中心湖-1日游>含215元门票游船 含往返车费 登梅峰观岛、渔乐岛、龙山岛 纯玩无购物",
+                                    "price":"299" 
+                                },
+                                {
+                                   "toKey":"6",
+                                    "img":"/static/17.jpg",
+                                    "name":"<浙西-大明山1日游>含110元大门票 含往返车位 观千亩草甸 走千米栈道 万米岩洞 无购物 ",
+                                    "price":"79" 
+                                }
+                            ]
+                        },
+                        {
+                            "bigimg":{
+                                "img":"/static/37.jpg",
+                                "toKey":"100"
+                            },
+                            "card":[
+                                {
+                                   "toKey":"1",
+                                    "img":"/static/31.jpg",
+                                    "name":"<泰州巴士自助4日游>宿泰州碧桂园凤凰酒店3晚 溱湖湿地公园/姜堰溱潼古镇 门票自选",
+                                    "price":"700" 
+                                },
+                                {
+                                  "toKey":"2",
+                                    "img":"/static/32.jpg",
+                                    "name":"<上海-巴士自由行4日游>宿延安饭店 1晚起订 上海迪士尼乐园、上海野生动物园、上海杜莎夫人蜡像馆多种门票自由选择",
+                                    "price":"785" 
+                                },
+                                {
+                                   "toKey":"3",
+                                    "img":"/static/33.jpg",
+                                    "name":"<张家界森林公园-大峡谷玻璃桥-天门山-双人品质自驾4日游>住武陵源湘西之恋主题客栈3晚含早（酒店管家品质服务，步行可抵达森林公园）",
+                                    "price":"1314" 
+                                },
+                                {
+                                    "toKey":"4",
+                                    "img":"/static/34.jpg",
+                                    "name":"<张家界-玻璃桥-天门山-玻璃栈道高铁4日游>长沙高铁站接 漫步玻璃桥 走玻璃栈道 随行wifi 0购物",
+                                    "price":"1441" 
+                                },
+                                {
+                                   "toKey":"5",
+                                    "img":"/static/35.jpg",
+                                    "name":"恩施土司城-土家女儿城-恩施大峡谷-坪坝营-梭布垭石林双动4日游>武汉往返 0购物天天发班 下单即享价值50元的富硒花枝茶叶1份 ",
+                                    "price":"1145" 
+                                },
+                                {
+                                   "toKey":"6",
+                                    "img":"/static/36.jpg",
+                                    "name":"<黄山-西递-宏村千岛湖4日游>天天发，0购物，宿山顶，观日出日落，览黄山美景，赏古韵宏村，游大美千岛湖",
+                                    "price":"1296" 
+                                }
+                            ]
+                        },
+                        {
+                            "bigimg":{
+                                "img":"/static/57.jpg",
+                                "toKey":"100"
+                            },
+                            "card":[
+                                {
+                                   "toKey":"1",
+                                    "img":"/static/51.jpg",
+                                    "name":"<青岛-威海海驴岛-蓬莱-日照海滨-连云港5日游>专车专导，大门票全含 升级2晚精品商务 4早6正 含198元/人梭子蟹海鲜宴 畅饮青岛啤酒 ",
+                                    "price":"469" 
+                                },
+                                {
+                                  "toKey":"2",
+                                    "img":"/static/52.jpg",
+                                    "name":"<成都-九寨沟-黄龙-自助5日游>两地连游，九寨三日专车，1加2加1行程，成都直飞九寨，4人享用车升级，全程挂四酒店集结",
+                                    "price":"2726" 
+                                },
+                                {
+                                   "toKey":"3",
+                                    "img":"/static/53.jpg",
+                                    "name":"<张家界-凤凰自驾5日游>3晚张家界 1晚凤凰，门票自选， 房型自选， 简单操作， 精选张家界民俗客栈 步行可抵达森林公园",
+                                    "price":"1188" 
+                                },
+                                {
+                                    "toKey":"4",
+                                    "img":"/static/54.jpg",
+                                    "name":"<普陀山-溪口-横店-宁波高铁动车5日游>品海鲜宴 佛国祈福 畅玩横店 探访名人故里 赏南唐老街 含接送站 ",
+                                    "price":"1880" 
+                                },
+                                {
+                                   "toKey":"5",
+                                    "img":"/static/55.jpg",
+                                    "name":"<北京亲子5日游>探秘皇城 精选品牌连锁酒店 国家大剧院花瓣厅眺望中南海 故宫寻宝 国子监入泮礼 科技馆探秘 进清华或北大",
+                                    "price":"1759" 
+                                },
+                                {
+                                   "toKey":"6",
+                                    "img":"/static/56.jpg",
+                                    "name":"<重庆市内渣白磁-抗战遗址-云阳龙缸-云端廊桥-万州大瀑火车5日游>红色景点联线 入住舒适酒店 云阳双景步步惊心 逛山城老街 赏巴渝文化",
+                                    "price":"1549" 
+                                }
+                            ]
+                        }
+                    ]        
+                  },
+                  {
+                    "id":"2",
+                    "title":"国内游",
+                    "key":"domestic",
+                    "sideimgs":"/static/pic1.jpg",
+                    "sideimages":"/static/ad1.jpg",
+                    "destination":[
+                        {"id":"1","title":"大理","key":"dali"},
+                        {"id":"2","title":"西双版纳","key":"xishuangbanna"},
+                        {"id":"3","title":"三亚","key":"sanya"},
+                        {"id":"4","title":"海口","key":"haikou"},
+                        {"id":"6","title":"拉萨","key":"lhasa"},
+                        {"id":"7","title":"日喀则","key":"shigatse"}
+                    ],
+                    "tabs":["西藏/新疆","云南/四川","浪漫海南"],
+                    "tabContent":[
+                        {
+                            "bigimg":{
+                                "img":"/static/29.jpg",
+                                "toKey":"110"
+                            },
+                            "card":[
+                                {
+                                   "toKey":"19",
+                                    "img":"/static/22.jpg",
+                                    "name":"【悠游】<林芝进出>林芝大峡谷、鲁朗、巴松错、卡定沟、南伊沟飞机往返5天",
+                                    "price":"￥9380" 
+                                },
+                                {
+                                   "toKey":"20",
+                                    "img":"/static/23.jpg",
+                                    "name":" 【悠游】<尚品·秘境>拉萨、纳木措、大峡谷、苯日神山、林芝卧飞纯玩9天 ",
+                                    "price":"8280" 
+                                },
+                                {
+                                   "toKey":"21",
+                                    "img":"/static/24.jpg",
+                                    "name":" 【悠游】<尚品·后藏> 拉萨、纳木措、卡若拉冰川、宗山城堡、日喀则卧飞纯玩8天  ",
+                                    "price":"7880" 
+                                },
+                                {
+                                   "toKey":"22",
+                                    "img":"/static/25.jpg",
+                                    "name":" 【悠游】<尚品·秘境> 拉萨、纳木措、大峡谷、苯日神山、林芝飞机往返纯玩7天  ",
+                                    "price":"9180" 
+                                },
+                                {
+                                   "toKey":"23",
+                                    "img":"/static/26.jpg",
+                                    "name":"<西藏盛宴>拉萨、林芝、大峡谷【一价全含】措木及日、鲁朗林海、纳木措双卧12天  ",
+                                    "price":"4880" 
+                                },
+                                {
+                                   "toKey":"24",
+                                    "img":"/static/27.jpg",
+                                    "name":"<乌市四星+1晚五星>乌鲁木齐、天山天池【民航正班】喀纳斯、坎儿井双飞8天 ",
+                                    "price":"4580" 
+                                }
+                            ]
+                        },
+                        {
+                            "bigimg":{
+                                "img":"/static/48.jpg",
+                                "toKey":"110"
+                            },
+                            "card":[
+                                {
+                                   "toKey":"19",
+                                    "img":"/static/42.jpg",
+                                    "name":"【悠游】【游购分离】<昆明、大理、丽江双飞6日>无自费、挂五+温泉、赠大型表演",
+                                    "price":"4080" 
+                                },
+                                {
+                                   "toKey":"20",
+                                    "img":"/static/43.jpg",
+                                    "name":"【悠游】【纯净云南】<昆明、大理、丽江双飞6日游> VIP廊桥或停机坪接机、洱海",
+                                    "price":"3080" 
+                                },
+                                {
+                                   "toKey":"21",
+                                    "img":"/static/44.jpg",
+                                    "name":" 【悠游】<昆明、大理、丽江三飞6日游>游石林，玉龙雪山，赠《丽江千古情》表演 ",
+                                    "price":"1699" 
+                                },
+                                {
+                                   "toKey":"22",
+                                    "img":"/static/45.jpg",
+                                    "name":" 【悠游】【纯净云南】<昆明、大理、丽江三飞6日>洱海大游船、虎跳峡、雪山、石林 ",
+                                    "price":"3780" 
+                                },
+                                {
+                                   "toKey":"23",
+                                    "img":"/static/46.jpg",
+                                    "name":" 【悠游】游购分离<昆明、大理、丽江、香格里拉双飞8日>豪华商务酒店+花园式酒店 ",
+                                    "price":"4180" 
+                                },
+                                {
+                                   "toKey":"24",
+                                    "img":"/static/47.jpg",
+                                    "name":"【悠游】【4人订制】<丽江、香格里拉双飞5日>小包团，特别赠送丽江千古情表演",
+                                    "price":"4950" 
+                                }
+                            ]
+                        },
+                        {
+                            "bigimg":{
+                                "img":"/static/67.jpg",
+                                "toKey":"110"
+                            },
+                            "card":[
+                                {
+                                   "toKey":"19",
+                                    "img":"/static/61.jpg",
+                                    "name":"<豪华海景房+送双人海鲜BBQ>三亚丽禾温德姆酒店双飞5天自由行",
+                                    "price":"3290" 
+                                },
+                                {
+                                   "toKey":"20",
+                                    "img":"/static/62.jpg",
+                                    "name":" 【悠雅】<三亚三亚湾希尔顿欢朋酒店双飞5日自由行> 舒适河景房  ",
+                                    "price":"2890" 
+                                },
+                                {
+                                   "toKey":"21",
+                                    "img":"/static/63.jpg",
+                                    "name":" 【悠雅】<三亚三亚湾红树林木棉酒店双飞5日自由行> 高级房  ",
+                                    "price":"2950" 
+                                },
+                                {
+                                   "toKey":"22",
+                                    "img":"/static/64.jpg",
+                                    "name":" 【悠雅】<三亚亚龙湾环球城大酒店双飞5日自由行> 主楼山景房 ",
+                                    "price":"1699" 
+                                },
+                                {
+                                   "toKey":"23",
+                                    "img":"/static/65.jpg",
+                                    "name":"【悠雅】<三亚4晚连住三亚湾红树林酒店5日游>0购物 ，蜈支洲岛畅玩一天 ",
+                                    "price":"4080" 
+                                },
+                                {
+                                   "toKey":"24",
+                                    "img":"/static/66.jpg",
+                                    "name":"【悠雅】<三亚5日4晚跟团游>四晚连住海景房，零自费，玩双岛，赠夜娱“车技表演”",
+                                    "price":"3780" 
+                                }
+                            ]
+                        }
+                    ]        
+                  },
+                  {
+                    "id":"3",
+                    "title":"自由行",
+                    "key":"selftrip",
+                    "sideimgs":"/static/pic2.jpg",
+                    "sideimages":"/static/ad1.jpg",
+                    "destination":[
+                        {"id":"1","title":"日本自由行","key":"japan"},
+                        {"id":"2","title":"香港自由行","key":"HongKong"},
+                        {"id":"3","title":"马尔代夫自由行","key":"maldives"},
+                        {"id":"4","title":"巴厘岛自由行","key":"bali"},
+                        {"id":"5","title":"三亚自由行","key":"sanya"},
+                        {"id":"6","title":"厦门自由行","key":"xiamen"},
+                        {"id":"7","title":"昆明自由行","key":"kunming"}
+                    ],
+                    "tabs":["出境自助游","国内自助游"],
+                    "tabContent":[
+                        {
+                            "bigimg":{
+                                "img":"/static/78.jpg",
+                                "toKey":"120"
+                            },
+                            "card":[
+                                {
+                                   "toKey":"37",
+                                    "img":"/static/71.jpg",
+                                    "name":"【+199升级三年多次】<日本冲绳4晚5日往返机票含税套餐>东航/吉祥直飞，天天发班，2017年全年团期可选 ",
+                                    "price":"1899" 
+                                },
+                                {
+                                   "toKey":"38",
+                                    "img":"/static/72.jpg",
+                                    "name":"【特价机票】<日本东京6/7日往返机票套餐>上海出发、捷星",
+                                    "price":"1099" 
+                                },
+                                {
+                                   "toKey":"39",
+                                    "img":"/static/73.jpg",
+                                    "name":"香港尖沙咀华丽Best Western Grand Hotel酒店3晚4日自由行>直飞往返、部分可收团签 ",
+                                    "price":"2049" 
+                                },
+                                {
+                                   "toKey":"40",
+                                    "img":"/static/74.jpg",
+                                    "name":"【亲子游优惠】<香港3晚4日自由行> 港龙国泰直飞、1晚迪士 ",
+                                    "price":"3099" 
+                                },
+                                {
+                                   "toKey":"41",
+                                    "img":"/static/75.jpg",
+                                    "name":"【婚博会】<马尔代夫可可棕榈波杜希蒂岛Coco Palm Bodu Hithi 4晚6日自由行>国泰航空、香港转机、婚博会预定第二 ",
+                                    "price":"13980" 
+                                },
+                                {
+                                   "toKey":"42",
+                                    "img":"/static/76.jpg",
+                                    "name":"【婚博会】<马尔代夫阿雅达岛Ayada4晚6日自由行>国泰航 ",
+                                    "price":"16580" 
+                                }
+                            ]
+                        },
+                        {
+                            "bigimg":{
+                                "img":"/static/38.jpg",
+                                "toKey":"120"
+                            },
+                            "card":[
+                                {
+                                   "toKey":"37",
+                                    "img":"/static/81.jpg",
+                                    "name":"海滨浪漫】山东日照海滨浪漫四日游——郑州出发 半自由行 可加住",
+                                    "price":"1699" 
+                                },
+                                {
+                                   "toKey":"38",
+                                    "img":"/static/82.jpg",
+                                    "name":"<海南三亚5日自助游>畅享自由，海口进出，精品自助精心推荐，汇集三亚优质酒店房型，嗨玩享不停 ",
+                                    "price":"2057" 
+                                },
+                                {
+                                   "toKey":"39",
+                                    "img":"/static/83.jpg",
+                                    "name":"<海南三亚8日自助游>多人入住套房集结，在三亚享受家的感觉",
+                                    "price":"2441" 
+                                },
+                                {
+                                   "toKey":"40",
+                                    "img":"/static/84.jpg",
+                                    "name":"<厦门五星酒店双飞4日自由行>免费专车接机，3晚连住，国际五星瑞颐酒店，正对鼓浪屿180度海景，入住即可享受自助双早，可升级鼓浪屿船票，可选鼓浪屿或土楼一日游，出游即可领取伴手礼 ",
+                                    "price":"2679" 
+                                },
+                                {
+                                   "toKey":"41",
+                                    "img":"/static/85.png",
+                                    "name":"<厦门-鼓浪屿双飞4日自助游>1晚岛上酒店，2晚市区高星级酒店 ，可选29元鼓浪屿船票 ,1元拼车接机,预定即可领取伴手礼(产品热卖）",
+                                    "price":"1900" 
+                                },
+                                {
+                                   "toKey":"42",
+                                    "img":"/static/86.jpg",
+                                    "name":"<昆大丽6日自助游>昆明进出，丽江大理入住亲的客栈，大理2晚，丽江1晚，玩转云南，0购 ",
+                                    "price":"2771" 
+                                }
+                            ]
+                        }
+                    ]        
+                },
+                {
+                    "id":"4",
+                    "title":"出境游",
+                    "key":"abroad",
+                    "sideimgs":"/static/pic2.jpg",
+                    "sideimages":"/static/ad1.jpg",
+                    "destination":[
+                        {"id":"1","title":"日本","key":"japan"},
+                        {"id":"2","title":"泰国","key":"thailand"},
+                        {"id":"3","title":"土耳其","key":"turkey"},
+                        {"id":"4","title":"新加坡","key":"singapore"},
+                        {"id":"5","title":"迪拜","key":"dubai"},
+                        {"id":"6","title":"塞班岛","key":"saipan"},
+                        {"id":"7","title":"马尔代夫","key":"maldives"}
+                    ],
+                    "tabs":["东南亚风情","澳非探秘","欧美大国"],
+                    "tabContent":[
+                        {
+                            "bigimg":{
+                                "img":"/static/97.jpg",
+                                "toKey":"130"
+                            },
+                            "card":[
+                                {
+                                   "toKey":"91",
+                                    "img":"/static/91.jpg",
+                                    "name":"<巴厘岛-新加坡四飞6晚8日游>巴厘岛2天随心自由玩 动人 ",
+                                    "price":"4756" 
+                                },
+                                {
+                                   "toKey":"92",
+                                    "img":"/static/92.jpg",
+                                    "name":"[端午]<泰国-普吉机票+当地5晚6日或7日游>5晚卡伦海滩希尔顿HILTON度假村，浓情PP岛出海，含接送机，当地行程可选 ",
+                                    "price":"4585" 
+                                },
+                                {
+                                   "toKey":"56",
+                                    "img":"/static/93.jpg",
+                                    "name":"<巴厘岛机票+5晚7日游>自营精致小包团 蓝梦岛出海（送",
+                                    "price":"5596" 
+                                },
+                                {
+                                   "toKey":"57",
+                                    "img":"/static/94.jpg",
+                                    "name":"[五一]<巴厘岛5日或6或7日游>臻程牛人专线，途牛自营，可选直飞，钻石5星住宿，希尔顿洲际君悦威斯汀，可升级酒店海景房，私密泳池VILLA，一栋一户，蓝梦出海（含海底漫步），含阿勇河漂流，无购物，含WIFI",
+                                    "price":"5699" 
+                                },
+                                {
+                                   "toKey":"58",
+                                    "img":"/static/95.jpg",
+                                    "name":"<斯里兰卡+马尔代夫双岛机票+当地8日游>两人起发 铁定发 ",
+                                    "price":"16731" 
+                                },
+                                {
+                                   "toKey":"59",
+                                    "img":"/static/96.png",
+                                    "name":"<尼泊尔机票+当地7晚8日游>成都出发，可全国联运 ",
+                                    "price":"6962" 
+                                }
+                            ]
+                        },
+                        {
+                            "bigimg":{
+                                "img":"/static/06.jpg",
+                                "toKey":"130"
+                            },
+                            "card":[
+                                {
+                                   "toKey":"54",
+                                    "img":"/static/00.png",
+                                    "name":"<澳洲-墨尔本-悉尼7日游>千名老人舞动澳洲，三大主题活",
+                                    "price":"7999" 
+                                },
+                                {
+                                   "toKey":"55",
+                                    "img":"/static/01.jpg",
+                                    "name":"<澳大利亚一地7日圆梦之旅游>长沙海航，部分地区配联运",
+                                    "price":"7999" 
+                                },
+                                {
+                                   "toKey":"56",
+                                    "img":"/static/02.jpg",
+                                    "name":"<奇迹土耳其之旅15日游>土耳其/攀登大亚拉腊山/死海滑 ",
+                                    "price":"24237" 
+                                },
+                                {
+                                   "toKey":"57",
+                                    "img":"/static/03.jpg",
+                                    "name":"<蓝色土耳其+希腊爱琴海全景15日游>VIP小团/圣岛海鲜 ",
+                                    "price":"17604" 
+                                },
+                                {
+                                   "toKey":"58",
+                                    "img":"/static/04.jpg",
+                                    "name":"[五一]<迪拜-沙迦-阿布扎比5晚6日游>4月28日特价4599 ",
+                                    "price":"4599" 
+                                },
+                                {
+                                   "toKey":"59",
+                                    "img":"/static/05.jpg",
+                                    "name":"<北京-埃及+迪拜10天7晚游>红海自由/全程五星/一流航",
+                                    "price":"8480" 
+                                }
+                            ]
+                        },
+                        {
+                            "bigimg":{
+                                "img":"/static/89.jpg",
+                                "toKey":"130"
+                            },
+                            "card":[
+                                {
+                                   "toKey":"54",
+                                    "img":"/static/10.jpg",
+                                    "name":"<俄罗斯-北欧四国13日游>部分团期A350或A380宽体客",
+                                    "price":"17200" 
+                                },
+                                {
+                                   "toKey":"55",
+                                    "img":"/static/19.jpg",
+                                    "name":"<法国-瑞士-意大利10-13日游>一价全含，雪朗峰，卢浮 ",
+                                    "price":"9699" 
+                                },
+                                {
+                                   "toKey":"56",
+                                    "img":"/static/39.jpeg",
+                                    "name":"[五一]<法瑞意13日游>一价全含 林志颖同款 旅行家推荐 牛",
+                                    "price":"15799" 
+                                },
+                                {
+                                   "toKey":"57",
+                                    "img":"/static/59.jpg",
+                                    "name":"<奥地利德国瑞士10-12日游>部分团期15人，瑞士4天，一",
+                                    "price":"15199" 
+                                },
+                                {
+                                   "toKey":"58",
+                                    "img":"/static/69.jpeg",
+                                    "name":"[端午]<美国东西海岸+羚羊彩穴+黄石公园+尼亚加拉16天 ",
+                                    "price":"26800" 
+                                },
+                                {
+                                   "toKey":"59",
+                                    "img":"/static/79.jpg",
+                                    "name":"<海洋极光号-华人包船-南极+南美四国32日游>登陆长城 ",
+                                    "price":"126800" 
+                                }
+                            ]
+                        }
+                    ]        
+                }
+            ],
+        "travel-around":[
+            {
+                "id":"1",
+                "title":"一、二日游",
+                "key":"erriyou",
+                "siderBanner":"/static/pic2.jpg",
+                "hotTreval":[
+                    {"id":"1","name":"黄山一日","key":"huangshan"},
+                    {"id":"2","name":"南京一日","key":"nanjing"},
+                    {"id":"3","name":"芜湖一日","key":"wuhu"}
+                ],
+                "cards":[
+                    {
+                        "id":"1",
+                        "toKey":"1",
+                        "img":"/static/11.jpeg",
+                        "name":"<南京中山陵-玄武湖-夫子庙1日游>合肥出发、含中餐，家庭游亲子游学生游均可，周末踏春美食休闲之旅、纯玩无购物 ",
+                        "price":"106", 
+                        "hoverTips":"瞻中山陵、游玄武湖、逛夫子庙、品金陵各色美食"
+                    },
+                     {
+                        "id":"2",
+                        "toKey":"2",
+                        "img":"/static/21.jpg",
+                        "name":"<无锡太湖鼋头渚荷花季-太湖游船-三国城水浒城1日游>享评弹表演及无锡特色小礼品一份 纯玩0购物",
+                        "price":"237", 
+                        "hoverTips":"游览5A级风景区三国水浒城 重回《三国演义》《水浒传》等影视作品拍摄地"
+                    },
+                     {
+                        "id":"3",
+                        "toKey":"3",
+                        "img":"/static/14.jpg",
+                        "name":"<芜湖方特四期东方神画1日游>一个有故事的主题乐园 重磅回归 一票制 0购物 全园嗨翻天",
+                        "price":"185", 
+                        "hoverTips":"一票制畅玩，0购物，嗨翻天"
+                    },
+                     {
+                        "id":"4",
+                        "toKey":"4",
+                        "img":"/static/15.jpg",
+                        "name":"<南昌万达主题乐园1日游>含主题乐园大门票，专车专导，每人一瓶矿泉水",
+                        "price":"259" ,
+                        "hoverTips":"江西人自己的首个世界级主题乐园"
+                    },
+                     {
+                        "id":"5",
+                        "toKey":"1",
+                        "img":"/static/12.jpg",
+                        "name":"<惠东双月湾露营-出海捕鱼2日游>沙滩露营、烧烤BBQ、看日出、观沙滩狂舞音乐晚会",
+                        "price":"227" ,
+                        "hoverTips":"此线路适合情侣、家庭游带孩子漫步"
+                    },
+                      {
+                        "id":"6",
+                        "toKey":"5",
+                        "img":"/static/16.jpg",
+                        "name":"<千岛湖-中心湖-1日游>含215元门票游船 含往返车费 登梅峰观岛、渔乐岛、龙山岛 纯玩无购物",
+                        "price":"299" ,
+                        "hoverTips":"千岛湖好山水，畅游千岛湖，呼吸新鲜空气"
+                    },
+                    {
+                        "id":"7",
+                        "toKey":"6",
+                        "img":"/static/17.jpg",
+                        "name":"<浙西-大明山1日游>含110元大门票 含往返车位 观千亩草甸 走千米栈道 万米岩洞 无购物 ",
+                        "price":"79" ,
+                        "hoverTips":"亲子朋友登高好去处，充实玩转一整天"
+                    },
+                     {
+                        "id":"8",
+                        "toKey":"8",
+                        "img":"/static/18.jpg",
+                        "name":"<日照海滨森林公园-李家台赶海-奇趣海洋馆2日游>宿海滨森林公园内 可升级海边别墅 门票全含无购物 体验出海捕鱼乐趣 含沙滩玩具 ",
+                        "price":"288" ,
+                        "hoverTips":"体验出海捕鱼乐趣 含沙滩玩具 "
+                    }
+                ],
+                "banner":"/static/pic1.jpg" 
+             },
+             {
+                "id":"2",
+                "title":"三、四日游",
+                "key":"sansiyou",
+                "siderBanner":"/static/pic2.jpg",
+                "hotTreval":[
+                    {"id":"1","name":"泰州四日","key":"taizhou"},
+                    {"id":"3","name":"张家界一日","key":"zhangjiajie"},
+                    {"id":"4","name":"黄山四日","key":"huangshan"},
+                    {"id":"5","name":"桂林四日","key":"guilin"}
+                ],
+                "cards":[
+                    {
+                        "id":"1",
+                        "toKey":"1",
+                        "img":"/static/31.jpg",
+                        "name":"<泰州巴士自助4日游>宿泰州碧桂园凤凰酒店3晚 溱湖湿地公园/姜堰溱潼古镇 门票自选",
+                        "price":"700" ,
+                        "hoverTips":"酒店距离有“泰州溱湖湿地”30分钟车程"
+                    },
+                     {
+                        "id":"2",
+                        "toKey":"2",
+                        "img":"/static/32.jpg",
+                        "name":"<上海-巴士自由行4日游>宿延安饭店 1晚起订 上海迪士尼乐园、上海野生动物园、上海杜莎夫人蜡像馆多种门票自由选择 ",
+                        "price":"785" ,
+                        "hoverTips":"实惠,机不可失"
+                    },
+                     {
+                        "id":"3",
+                        "toKey":"3",
+                        "img":"/static/33.jpg",
+                        "name":"<张家界森林公园-大峡谷玻璃桥-天门山-双人品质自驾4日游>住武陵源湘西之恋主题客栈3晚含早（酒店管家品质服务，步行可抵达森林公园）",
+                        "price":"1314" ,
+                        "hoverTips":"预定即可领取张家界土特产伴手礼和享餐厅折扣"
+                    },
+                     {
+                        "id":"4",
+                        "toKey":"4",
+                        "img":"/static/34.jpg",
+                        "name":"<张家界-玻璃桥-天门山-玻璃栈道高铁4日游>长沙高铁站接 漫步玻璃桥 走玻璃栈道 随行wifi 0购物",
+                        "price":"1441" ,
+                        "hoverTips":"奇山秀水"
+                    },
+                     {
+                        "id":"5",
+                        "toKey":"5",
+                        "img":"/static/35.jpg",
+                        "name":"恩施土司城-土家女儿城-恩施大峡谷-坪坝营-梭布垭石林双动4日游>武汉往返 0购物天天发班 下单即享价值50元的富硒花枝茶叶1份 ",
+                        "price":"1145" ,
+                        "hoverTips":"下单即享价值50元的富硒花枝茶叶1份"
+                    },
+                      {
+                        "id":"6",
+                        "toKey":"6",
+                        "img":"/static/36.jpg",
+                        "name":"<黄山-西递-宏村千岛湖4日游>天天发，0购物，宿山顶，观日出日落，览黄山美景，赏古韵宏村，游大美千岛湖",
+                        "price":"1296" ,
+                        "hoverTips":"登黄山，观日出日落；品宏村，西递，赏徽派建筑"
+                    },
+                    {
+                        "id":"7",
+                        "toKey":"7",
+                        "img":"/static/37.jpg",
+                        "name":"<桂林-阳朔-兴坪漓江-竹筏漂流-银子岩-漓水古越-图腾古道汽车3日游>游 20元人民币背景 品桂林米粉 观实景演出 东莞出发",
+                        "price":"399" ,
+                        "hoverTips":"古镇古城、名山胜水、城市观光"
+                    },
+                     {
+                        "id":"8",
+                        "toKey":"8",
+                        "img":"/static/38.jpg",
+                        "name":"<桂林-阳朔-兴坪古镇-漓水古越-兴坪漓江-银子岩汽车3日游>游20元人民币背景 观山水实景演出",
+                        "price":"41" ,
+                        "hoverTips":"古镇古城、名山胜水、城市观光"
+                    }
+                ],
+                "banner":"/static/pic1.jpg" 
+             },
+             {
+                "id":"3",
+                "title":"五日及以上游",
+                "key":"fivemoreyou",
+                "siderBanner":"/static/pic2.jpg",
+                "hotTreval":[
+                    {"id":"1","name":"青岛五日","key":"qingdao"},
+                    {"id":"2","name":"张家界五日","key":"zhangjiajie"},
+                    {"id":"3","name":"北京五日","key":"beijing"},
+                    {"id":"4","name":"昆明五日","key":"kunming"}
+                ],
+                "cards":[
+                    {
+                        "id":"1",
+                        "toKey":"1",
+                        "img":"/static/51.jpg",
+                        "name":"<青岛-威海海驴岛-蓬莱-日照海滨-连云港5日游>专车专导，大门票全含 升级2晚精品商务 4早6正 含198元/人梭子蟹海鲜宴 畅饮青岛啤酒 <青岛-威海海驴岛-蓬莱-日照海滨-连云港5日游>专车专导，大门票全含 升级2晚精品商务 4早6正 含198元/人梭子蟹海鲜宴 畅饮青岛啤酒 ",
+                        "price":"469" ,
+                        "hoverTips":"2晚商务或快捷酒店+免费升级1晚国际品牌酒店+1晚温泉度假酒店"
+                    },
+                     {
+                        "id":"2",
+                        "toKey":"1",
+                        "img":"/static/52.jpg",
+                        "name":"<成都-九寨沟-黄龙-自助5日游>两地连游，九寨三日专车，1加2加1行程，成都直飞九寨，4人享用车升级，全程挂四酒店集结",
+                        "price":"2726" ,
+                        "hoverTips":"成都2晚住宿+九寨沟酒店2晚住宿（含早）+九寨沟地面专车服务"
+                    },
+                     {
+                        "id":"3",
+                        "toKey":"1",
+                        "img":"/static/53.jpg",
+                        "name":"<张家界-凤凰自驾5日游>3晚张家界 1晚凤凰，门票自选， 房型自选， 简单操作， 精选张家界民俗客栈 步行可抵达森林公园",
+                        "price":"1188" ,
+                        "hoverTips":"经济实惠"
+                    },
+                     {
+                        "id":"4",
+                        "toKey":"1",
+                        "img":"/static/54.jpg",
+                        "name":"<普陀山-溪口-横店-宁波高铁动车5日游>品海鲜宴 佛国祈福 畅玩横店 探访名人故里 赏南唐老街 含接送站 ",
+                        "price":"1880" ,
+                        "hoverTips":"经济实惠"
+                    },
+                     {
+                        "id":"5",
+                        "toKey":"1",
+                        "img":"/static/55.jpg",
+                        "name":"<北京亲子5日游>探秘皇城 精选品牌连锁酒店 国家大剧院花瓣厅眺望中南海 故宫寻宝 国子监入泮礼 科技馆探秘 进清华或北大",
+                        "price":"1759" ,
+                        "hoverTips":"赠送国子监----入泮礼"
+                    },
+                      {
+                        "id":"6",
+                        "toKey":"1",
+                        "img":"/static/56.png",
+                        "name":"<昆明-弥勒-普者黑-坝美自驾6日游>落地提车、自在旅行、专业路书、24小时旅途支持、定制服务、两人成团、随时出发 ",
+                        "price":"1943" ,
+                        "hoverTips":"不可思议的土地"
+                    },
+                      {
+                        "id":"7",
+                        "toKey":"1",
+                        "img":"/static/57.jpg",
+                        "name":"<昆明-建水-元阳-抚仙湖自驾6日游>落地提车、自在旅行、专业路书、24小时旅途支持、定制服务、两人成团、随时出发",
+                        "price":"1578" ,
+                        "hoverTips":"定制服务、两人成团"
+                    },
+                      {
+                        "id":"8",
+                        "toKey":"1",
+                        "img":"/static/58.jpg",
+                        "name":"<大理双廊-丽江-虎跳峡-香格里拉自驾6日游>落地提车、自在旅行、专业路书、24小时旅途支持、定制服务、丽江DIY、两人成团、随时出发",
+                        "price":"1890" ,
+                        "hoverTips":"上海直飞，正航班，全程0自费,2晚市区4星级酒店+1晚黄金海岸酒店入住"
+                    }
+                ],
+                "banner":"/static/pic1.jpg" 
+             }
+            ],
+        "travel-domestic":[
+            {
+                "id":"1",
+                "title":"西藏/新疆",
+                "key":"TX",
+                "siderBanner":"/static/pic2.jpg",
+                "hotTreval":[
+                    {"id":"1","name":"拉萨","key":"lhasa"},
+                    {"id":"2","name":"吐鲁番","key":"turpan"},
+                    {"id":"3","name":"天池","key":"HeavenPool"}
+                ],
+                "cards":[
+                    {
+                        "id":"1",
+                        "toKey":"1",
+                        "img":"/static/22.jpg",
+                        "name":"【悠游】<林芝进出>林芝大峡谷、鲁朗、巴松错、卡定沟、南伊沟飞机往返5天 ",
+                        "price":"9380", 
+                        "hoverTips":"全程0自费0购物，特别入住雅鲁藏布大峡谷江边酒店，赠送林芝石锅鸡（特殊线路2人起订）"
+                    },
+                     {
+                        "id":"2",
+                        "toKey":"2",
+                        "img":"/static/23.jpg",
+                        "name":" 【悠游】<尚品·秘境>拉萨、纳木措、大峡谷、苯日神山、林芝卧飞纯玩9天 ",
+                        "price":"8280", 
+                        "hoverTips":"西藏全景,高端定制产品,超值赠送,全程0自费0购物"
+                    },
+                     {
+                        "id":"3",
+                        "toKey":"3",
+                        "img":"/static/24.jpg",
+                        "name":" 【悠游】<尚品·后藏> 拉萨、纳木措、卡若拉冰川、宗山城堡、日喀则卧飞纯玩8天 ",
+                        "price":"7880", 
+                        "hoverTips":"西藏全景,高端定制"
+                    },
+                     {
+                        "id":"4",
+                        "toKey":"4",
+                        "img":"/static/25.jpg",
+                        "name":" 【悠游】<尚品·秘境> 拉萨、纳木措、大峡谷、苯日神山、林芝飞机往返纯玩7天 ",
+                        "price":"9180" ,
+                        "hoverTips":"7天6晚"
+                    },
+                     {
+                        "id":"5",
+                        "toKey":"1",
+                        "img":"/static/26.jpg",
+                        "name":"<西藏盛宴>拉萨、林芝、大峡谷【一价全含】措木及日、鲁朗林海、纳木措双卧12天 ",
+                        "price":"4880" ,
+                        "hoverTips":"西藏盛宴"
+                    },
+                      {
+                        "id":"6",
+                        "toKey":"5",
+                        "img":"/static/27.jpg",
+                        "name":"<乌市四星+1晚五星>乌鲁木齐、天山天池【民航正班】喀纳斯、坎儿井双飞8天",
+                        "price":"4580" ,
+                        "hoverTips":"千岛湖好山水，畅游千岛湖，呼吸新鲜空气"
+                    },
+                    {
+                        "id":"7",
+                        "toKey":"6",
+                        "img":"/static/28.jpg",
+                        "name":"<南北疆大环线>乌市、可可托海、喀纳斯【西域画廊】禾木、伊犁、塞里木湖双卧16天",
+                        "price":"4580" ,
+                        "hoverTips":"南北疆精华景点一网打尽"
+                    },
+                     {
+                        "id":"8",
+                        "toKey":"8",
+                        "img":"/static/29.jpg",
+                        "name":"【悠游】<巅峰之旅>拉萨、纳木错、卡若拉冰川、珠峰双卧纯玩12天",
+                        "price":"6280" ,
+                        "hoverTips":"珠峰大本营帐蓬住宿一晚"
+                    }
+                ],
+                "banner":"/static/pic1.jpg" 
+             },
+             {
+                "id":"2",
+                "title":"云南/四川",
+                "key":"YS",
+                "siderBanner":"/static/pic2.jpg",
+                "hotTreval":[
+                    {"id":"1","name":"丽江","key":"lijiang"},
+                    {"id":"2","name":"香格里拉","key":"shangri-La"},
+                    {"id":"3","name":"大理","key":"dali"}
+                ],  
+                "cards":[
+                    {
+                        "id":"1",
+                        "toKey":"1",
+                        "img":"/static/42.jpg",
+                        "name":"【悠游】【游购分离】<昆明、大理、丽江双飞6日>无自费、挂五+温泉、赠大型表演",
+                        "price":"4080" ,
+                        "hoverTips":"五星酒店+豪华度假、养生温泉酒店、特色手工体验、鸢尾图书馆下午茶、古城观景台影像记录"
+                    },
+                     {
+                        "id":"2",
+                        "toKey":"2",
+                        "img":"/static/43.jpg",
+                        "name":"【悠游】【纯净云南】<昆明、大理、丽江双飞6日游> VIP廊桥或停机坪接机、洱海",
+                        "price":"3080" ,
+                        "hoverTips":"特别赠送两大表演"
+                    },
+                     {
+                        "id":"3",
+                        "toKey":"3",
+                        "img":"/static/44.jpg",
+                        "name":"【悠游】<昆明、大理、丽江三飞6日游>游石林，玉龙雪山，赠《丽江千古情》表演",
+                        "price":"1699" ,
+                        "hoverTips":"赠《丽江千古情》"
+                    },
+                     {
+                        "id":"4",
+                        "toKey":"4",
+                        "img":"/static/45.jpg",
+                        "name":" 【悠游】【纯净云南】<昆明、大理、丽江三飞6日>洱海大游船、虎跳峡、雪山、石林 ",
+                        "price":"3780" ,
+                        "hoverTips":"洱海大游船、虎跳峡、雪山、石林"
+                    },
+                     {
+                        "id":"5",
+                        "toKey":"5",
+                        "img":"/static/46.jpg",
+                        "name":" 【悠游】游购分离<昆明、大理、丽江、香格里拉双飞8日>豪华商务酒店+花园式酒店 ",
+                        "price":"4180" ,
+                        "hoverTips":"豪华商务酒店+花园式酒店"
+                    },
+                      {
+                        "id":"6",
+                        "toKey":"6",
+                        "img":"/static/47.jpg",
+                        "name":"【悠游】【4人订制】<丽江、香格里拉双飞5日>小包团，特别赠送丽江千古情表演",
+                        "price":"4950" ,
+                        "hoverTips":"特别赠送丽江千古情表演"
+                    },
+                    {
+                        "id":"7",
+                        "toKey":"7",
+                        "img":"/static/48.jpg",
+                        "name":"<纯玩无限制丽江、香格里拉5日游>玉龙雪山冰川大锁、虎跳峡、转经筒",
+                        "price":"5080" ,
+                        "hoverTips":"邂逅历史的静谧和现代的美丽"
+                    },
+                     {
+                        "id":"8",
+                        "toKey":"8",
+                        "img":"/static/49.jpg",
+                        "name":"【悠游】<昆明、芒市、瑞丽、腾冲  3飞6日>赠送一晚温泉酒店+梦幻腾冲",
+                        "price":"3980" ,
+                        "hoverTips":"赠送一晚温泉酒店+梦幻腾冲"
+                    }
+                ],
+                "banner":"/static/pic1.jpg" 
+             },
+             {
+                "id":"3",
+                "title":"浪漫海南",
+                "key":"hainan",
+                "siderBanner":"/static/pic2.jpg",
+                "hotTreval":[
+                    {"id":"1","name":"三亚","key":"sanya"},
+                    {"id":"2","name":"蜈支洲岛","key":"Wuzhizhou"}
+                ],  
+                "cards":[
+                    {
+                        "id":"1",
+                        "toKey":"1",
+                        "img":"/static/61.jpg",
+                        "name":"<豪华海景房+送双人海鲜BBQ>三亚丽禾温德姆酒店双飞5天自由行",
+                        "price":"3290" ,
+                        "hoverTips":"赠送三亚机场至酒店往返专车接送机各一次+双人海鲜BBQ!"
+                    },
+                     {
+                        "id":"2",
+                        "toKey":"1",
+                        "img":"/static/62.jpg",
+                        "name":" 【悠雅】<三亚三亚湾希尔顿欢朋酒店双飞5日自由行> 舒适河景房 ",
+                        "price":"2890" ,
+                        "hoverTips":"舒适河景房"
+                    },
+                     {
+                        "id":"3",
+                        "toKey":"1",
+                        "img":"/static/63.jpg",
+                        "name":" 【悠雅】<三亚三亚湾红树林木棉酒店双飞5日自由行> 高级房 ",
+                        "price":"2750" ,
+                        "hoverTips":"高级房"
+                    },
+                     {
+                        "id":"4",
+                        "toKey":"1",
+                        "img":"/static/64.jpg",
+                        "name":" 【悠雅】<三亚亚龙湾环球城大酒店双飞5日自由行> 主楼山景房 ",
+                        "price":"2950" ,
+                        "hoverTips":"主楼山景房"
+                    },
+                     {
+                        "id":"5",
+                        "toKey":"1",
+                        "img":"/static/65.jpg",
+                        "name":"【悠雅】<三亚4晚连住三亚湾红树林酒店5日游>0购物 ，蜈支洲岛畅玩一天",
+                        "price":"4080" ,
+                        "hoverTips":"三亚一地，四晚连住知名品牌酒店•三亚湾红树林度假世界高级房"
+                    },
+                      {
+                        "id":"6",
+                        "toKey":"1",
+                        "img":"/static/66.jpg",
+                        "name":"【悠雅】<三亚5日4晚跟团游>四晚连住海景房，零自费，玩双岛，赠夜娱“车技表演”",
+                        "price":"3780" ,
+                        "hoverTips":"四晚连住海景房"
+                    },
+                      {
+                        "id":"7",
+                        "toKey":"1",
+                        "img":"/static/67.jpg",
+                        "name":"【悠雅】<三亚5日4晚跟团游>3晚希尔顿+1晚小月湾临海木屋、赠送夜游三亚湾",
+                        "price":"3160" ,
+                        "hoverTips":"3晚希尔顿+1晚小月湾临海木屋、赠送夜游三亚湾"
+                    },
+                      {
+                        "id":"8",
+                        "toKey":"1",
+                        "img":"/static/68.jpg",
+                        "name":"【悠雅】<三亚4晚连住欢朋希尔顿5日游>蜈支洲岛一整天，甄选景区，享受希尔顿服务",
+                        "price":"4000" ,
+                        "hoverTips":"kt 免行李搬运之忧，升级特色餐，轻松行程更舒心"
+                    }
+                ],
+                "banner":"/static/pic1.jpg" 
+             }
+            ],
+        "travel-selftrip":[
+            {
+                "id":"1",
+                "title":"出境自助游",
+                "key":"selftrip-chujing",
+                "siderBanner":"/static/pic2.jpg",
+                "hotTreval":[
+                    {"id":"1","name":"日本自由行","key":"japan"},
+                    {"id":"2","name":"香港自由行","key":"HongKong"},
+                    {"id":"3","name":"马尔代夫自由行","key":"maldives"},
+                    {"id":"4","name":"巴厘岛自由行","key":"bali"}
+                ],
+                "cards":[
+                    {
+                        "id":"1",
+                        "toKey":"1",
+                        "img":"/static/71.jpg",
+                        "name":"【+199升级三年多次】<日本冲绳4晚5日往返机票含税套餐>东航/吉祥直飞，天天发班，2017年全年团期可选",
+                        "price":"1899", 
+                        "hoverTips":"东方航空每周一至五出发，吉祥航空每周六、七出发，上海直飞， 白天正班机"
+                    },
+                     {
+                        "id":"2",
+                        "toKey":"2",
+                        "img":"/static/72.jpg",
+                        "name":"【特价机票】<日本东京6/7日往返机票套餐>上海出发、捷星",
+                        "price":"1099", 
+                        "hoverTips":"暑期超值特惠，+1元可赠全程wifi"
+                    },
+                     {
+                        "id":"3",
+                        "toKey":"3",
+                        "img":"/static/73.jpg",
+                        "name":"香港尖沙咀华丽Best Western Grand Hotel酒店3晚4日自由行>直飞往返、部分可收团签",
+                        "price":"2049", 
+                        "hoverTips":"精选优质航班，上海直飞往返，安全放心，市区酒店"
+                    },
+                     {
+                        "id":"4",
+                        "toKey":"4",
+                        "img":"/static/74.jpg",
+                        "name":"【亲子游优惠】<香港3晚4日自由行> 港龙国泰直飞、1晚迪士",
+                        "price":"3099" ,
+                        "hoverTips":"港龙国泰直飞、1晚迪士尼好莱坞酒店+2晚九龙海湾"
+                    },
+                     {
+                        "id":"5",
+                        "toKey":"1",
+                        "img":"/static/75.jpg",
+                        "name":"【婚博会】<马尔代夫可可棕榈波杜希蒂岛Coco Palm Bodu Hithi 4晚6日自由行>国泰航空、香港转机、婚博会预定第二",
+                        "price":"13980" ,
+                        "hoverTips":"入住2晚沙滩泳池别墅+2晚水上泳池别墅，含早晚餐，快艇上岛"
+                    },
+                      {
+                        "id":"6",
+                        "toKey":"5",
+                        "img":"/static/76.jpg",
+                        "name":"【婚博会】<马尔代夫阿雅达岛Ayada4晚6日自由行>国泰航",
+                        "price":"16580" ,
+                        "hoverTips":"千岛湖好山水，畅游千岛湖，呼吸新鲜空气"
+                    },
+                    {
+                        "id":"7",
+                        "toKey":"6",
+                        "img":"/static/77.jpg",
+                        "name":"新品热卖】<巴厘岛洲际度假酒店 InterContinental Bali Resort4晚5日自由行>鹰航直飞/转机、金巴兰地区酒店",
+                        "price":"6580" ,
+                        "hoverTips":"优选鹰航直飞往返，感受巴厘岛纯净海滩，赠送机场-酒店往返接送机！"
+                    },
+                     {
+                        "id":"8",
+                        "toKey":"8",
+                        "img":"/static/78.jpg",
+                        "name":"【婚博会】【私人订制】<巴厘岛水明漾alila酒店+圣瑞吉酒店尊贵套房 4晚5日自由行>鹰航直飞、蔚蓝巴厘、蜜月之旅",
+                        "price":"15880" ,
+                        "hoverTips":"鹰航直飞、蔚蓝巴厘、蜜月之旅  "
+                    }
+                ],
+                "banner":"/static/pic1.jpg" 
+             },
+             {
+                "id":"2",
+                "title":"国内自助游",
+                "key":"selftrip-domestic",
+                "siderBanner":"/static/pic2.jpg",
+                "hotTreval":[
+                    {"id":"1","name":"三亚自由行","key":"sanya"},
+                    {"id":"3","name":"厦门自由行","key":"xiamen"},
+                    {"id":"4","name":"昆明自由行","key":"kunming"}
+                ],
+                "cards":[
+                    {
+                        "id":"1",
+                        "toKey":"1",
+                        "img":"/static/81.jpg",
+                        "name":"【海滨浪漫】山东日照海滨浪漫四日游——郑州出发 半自由行 可加住",
+                        "price":"208" ,
+                        "hoverTips":"充分的海滨游览时间"
+                    },
+                     {
+                        "id":"2",
+                        "toKey":"2",
+                        "img":"/static/82.jpg",
+                        "name":"<海南三亚5日自助游>畅享自由，海口进出，精品自助精心推荐，汇集三亚优质酒店房型，嗨玩享不停",
+                        "price":"2057" ,
+                        "hoverTips":"汇集三亚优质酒店房型，嗨玩享不停"
+                    },
+                     {
+                        "id":"3",
+                        "toKey":"3",
+                        "img":"/static/83.jpg",
+                        "name":"<海南三亚8日自助游>多人入住套房集结，在三亚享受家的感觉",
+                        "price":"2441" ,
+                        "hoverTips":"多人入住套房集结"
+                    },
+                     {
+                        "id":"4",
+                        "toKey":"4",
+                        "img":"/static/84.jpg",
+                        "name":"<厦门五星酒店双飞4日自由行>免费专车接机，3晚连住，国际五星瑞颐酒店，正对鼓浪屿180度海景，入住即可享受自助双早，可升级鼓浪屿船票，可选鼓浪屿或土楼一日游，出游即可领取伴手礼",
+                        "price":"2679" ,
+                        "hoverTips":"免费专车接机，3晚连住"
+                    },
+                     {
+                        "id":"5",
+                        "toKey":"5",
+                        "img":"/static/85.png",
+                        "name":"<厦门-鼓浪屿双飞4日自助游>1晚岛上酒店，2晚市区高星级酒店 ，可选29元鼓浪屿船票 ,1元拼车接机,预定即可领取伴手礼(产品热卖）",
+                        "price":"1900" ,
+                        "hoverTips":"1晚岛上酒店，2晚市区高星级酒店 "
+                    },
+                      {
+                        "id":"6",
+                        "toKey":"6",
+                        "img":"/static/86.jpg",
+                        "name":"<昆大丽6日自助游>昆明进出，丽江大理入住亲的客栈，大理2晚，丽江1晚，玩转云南，0购",
+                        "price":"2771" ,
+                        "hoverTips":"大理2晚，丽江1晚，玩转云南"
+                    },
+                    {
+                        "id":"7",
+                        "toKey":"7",
+                        "img":"/static/87.jpg",
+                        "name":"<丽江5日自助游>热销TOP客栈，雪山幽湖，浪漫丽江",
+                        "price":"1760" ,
+                        "hoverTips":"可赠送免费接机或者接送机"
+                    },
+                     {
+                        "id":"8",
+                        "toKey":"8",
+                        "img":"/static/88.jpg",
+                        "name":"<昆明-丽江7日自助游>四飞航班，酒店任选，昆明丽江两地",
+                        "price":"2696" ,
+                        "hoverTips":"昆明丽江6晚7日自由行"
+                    }
+                ],
+                "banner":"/static/pic1.jpg" 
+             }
+            ],
+        "travel-abroad":[
+            {
+                "id":"1",
+                "title":"东南亚风情",
+                "key":"SoutheastAsia",
+                "siderBanner":"/static/pic2.jpg",
+                "hotTreval":[
+                    {"id":"1","name":"新加坡","key":"singapore"},
+                    {"id":"2","name":"泰国","key":"thailand"},
+                    {"id":"3","name":"巴厘岛","key":"bali"},
+                    {"id":"4","name":"马尔代夫","key":"maldives"},
+                    {"id":"5","name":"尼泊尔","key":"nepal"}
+                ],
+                "cards":[
+                    {
+                        "id":"1",
+                        "toKey":"1",
+                        "img":"/static/91.jpg",
+                        "name":"<巴厘岛-新加坡四飞6晚8日游>巴厘岛2天随心自由玩 动人",
+                        "price":"4756", 
+                        "hoverTips":"特别赠送巴厘岛自由活动（1-2天），蜜月之旅自由自在"
+                    },
+                     {
+                        "id":"2",
+                        "toKey":"2",
+                        "img":"/static/92.jpg",
+                        "name":"[端午]<泰国-普吉机票+当地5晚6日或7日游>5晚卡伦海滩希尔顿HILTON度假村，浓情PP岛出海，含接送机，当地行程可选",
+                        "price":"4585", 
+                        "hoverTips":"国际五星连住"
+                    },
+                     {
+                        "id":"3",
+                        "toKey":"3",
+                        "img":"/static/93.jpg",
+                        "name":"<巴厘岛机票+5晚7日游>自营精致小包团 蓝梦岛出海（送",
+                        "price":"5596", 
+                        "hoverTips":"海边国际五星 独栋泳池别墅 蓝梦出海（送海底漫步） 阿勇河漂流 精油SPA 阿丽拉下午茶 纯玩"
+                    },
+                     {
+                        "id":"4",
+                        "toKey":"4",
+                        "img":"/static/94.jpg",
+                        "name":"[五一]<巴厘岛5日或6或7日游>臻程牛人专线，途牛自营，可选直飞，钻石5星住宿，希尔顿洲际君悦威斯汀，可升级酒店海景房，私密泳池VILLA，一栋一户，蓝梦出海（含海底漫步），含阿勇河漂流，无购物，含WIFI",
+                        "price":"5699" ,
+                        "hoverTips":"2晚海边国际五星  2晚独栋别墅   经典行程一网打尽 可选五星航空服务"
+                    },
+                     {
+                        "id":"5",
+                        "toKey":"1",
+                        "img":"/static/95.jpg",
+                        "name":"<斯里兰卡+马尔代夫双岛机票+当地8日游>两人起发 铁定发",
+                        "price":"16731" ,
+                        "hoverTips":"马尔代夫 斯里兰卡 兰卡五星体验 "
+                    },
+                      {
+                        "id":"6",
+                        "toKey":"5",
+                        "img":"/static/96.png",
+                        "name":"<尼泊尔机票+当地7晚8日游>成都出发，可全国联运",
+                        "price":"6962" ,
+                        "hoverTips":"<尼泊尔机票+当地7晚8日游>成都出发，可全国联运"
+                    },
+                    {
+                        "id":"7",
+                        "toKey":"6",
+                        "img":"/static/97.jpg",
+                        "name":"[清明]<尼泊尔机票+当地8晚9日游>自然人文俱览，国航全国联运，纵览喜马拉雅，雪山美景，VIP小包团，可升级单车单导",
+                        "price":"6567" ,
+                        "hoverTips":"飞跃珠峰 国家森林公园 等风来拍摄地 国航全国联运"
+                    },
+                     {
+                        "id":"8",
+                        "toKey":"8",
+                        "img":"/static/98.jpg",
+                        "name":"<尼泊尔印度加德满都-德里-阿格拉-斋普尔-杜利凯尔机票",
+                        "price":"11846" ,
+                        "hoverTips":"人文风光 含服务费 无自费 飞越珠峰 "
+                    }
+                ],
+                "banner":"/static/pic1.jpg" 
+             },
+             {
+                "id":"2",
+                "title":"澳非探秘",
+                "key":"Macao",
+                "siderBanner":"/static/pic2.jpg",
+                "hotTreval":[
+                    {"id":"1","name":"澳大利亚","key":"australia"},
+                    {"id":"3","name":"土耳其","key":"turkey"},
+                    {"id":"4","name":"迪拜","key":"dubai"},
+                    {"id":"5","name":"阿拉伯","key":"arab"}
+                ],
+                "cards":[
+                    {
+                        "id":"1",
+                        "toKey":"1",
+                        "img":"/static/00.png",
+                        "name":"<澳洲-墨尔本-悉尼7日游>千名老人舞动澳洲，三大主题活",
+                        "price":"7999" ,
+                        "hoverTips":"2晚海边国际五星  2晚独栋别墅   经典行程一网打尽 可选五星航空服务"
+                    },
+                     {
+                        "id":"2",
+                        "toKey":"2",
+                        "img":"/static/01.jpg",
+                        "name":"<澳大利亚一地7日圆梦之旅游>长沙海航，部分地区配联运",
+                        "price":"7999" ,
+                        "hoverTips":"【蓝山国家公园】【墨尔本野生动物园】全程入住当地特色酒店"
+                    },
+                     {
+                        "id":"3",
+                        "toKey":"3",
+                        "img":"/static/02.jpg",
+                        "name":"<奇迹土耳其之旅15日游>土耳其/攀登大亚拉腊山/死海滑",
+                        "price":"24237" ,
+                        "hoverTips":"土耳其 伊斯坦布尔 大亚拉腊山 阿尼古城遗址 费特希耶 卡帕多西亚 "
+                    },
+                     {
+                        "id":"4",
+                        "toKey":"4",
+                        "img":"/static/03.jpg",
+                        "name":"<蓝色土耳其+希腊爱琴海全景15日游>VIP小团/圣岛海鲜",
+                        "price":"17604" ,
+                        "hoverTips":"雅典卫城 大理石竞技场 圣托里尼岛 蓝色清真寺 博斯普鲁斯 阿斯番多斯 "
+                    },
+                     {
+                        "id":"5",
+                        "toKey":"5",
+                        "img":"/static/04.jpg",
+                        "name":"[五一]<迪拜-沙迦-阿布扎比5晚6日游>4月28日特价4599",
+                        "price":"4599" ,
+                        "hoverTips":"迪拜"
+                    },
+                      {
+                        "id":"6",
+                        "toKey":"6",
+                        "img":"/static/05.jpg",
+                        "name":"<北京-埃及+迪拜10天7晚游>红海自由/全程五星/一流航",
+                        "price":"8480" ,
+                        "hoverTips":"埃及博物馆、卢克索神庙群、女王神庙、红海、金字塔、狮身人面像、哈利法塔、帆船酒店、棕榈岛！"
+                    },
+                    {
+                        "id":"7",
+                        "toKey":"7",
+                        "img":"/static/06.jpg",
+                        "name":"[五一]<埃及全景8日游>包机直飞/三千出游/五百点评/全程",
+                        "price":"5499" ,
+                        "hoverTips":"全民埃及 红海度假 吉萨金字塔群 亚历山大 安排内陆飞机 经典城市覆盖 "
+                    },
+                     {
+                        "id":"8",
+                        "toKey":"8",
+                        "img":"/static/07.jpg",
+                        "name":"<埃及土耳其15日游>两国深度/土航机上WIFI/内陆双飞/",
+                        "price":"10449" ,
+                        "hoverTips":"两国深度全景 吉萨金字塔群 埃及博物馆 红海两晚度假 希林杰小镇 地下城 "
+                    }
+                ],
+                "banner":"/static/pic1.jpg" 
+             },
+             {
+                "id":"3",
+                "title":"欧美大国",
+                "key":"EuropeAmerica",
+                "siderBanner":"/static/pic2.jpg",
+                "hotTreval":[
+                    {"id":"1","name":"俄罗斯","key":"russia"},
+                    {"id":"2","name":"意大利","key":"Italy"},
+                    {"id":"3","name":"美国","key":"USA"},
+                    {"id":"4","name":"黄石公园","key":"yellowstone"}
+                ],
+                "cards":[
+                    {
+                        "id":"1",
+                        "toKey":"1",
+                        "img":"/static/10.jpg",
+                        "name":"<俄罗斯-北欧四国13日游>部分团期A350或A380宽体客",
+                        "price":"17200" ,
+                        "hoverTips":"2晚商务或快捷酒店+免费升级1晚国际品牌酒店+1晚温泉度假酒店"
+                    },
+                     {
+                        "id":"2",
+                        "toKey":"1",
+                        "img":"/static/19.jpg",
+                        "name":"<法国-瑞士-意大利10-13日游>一价全含，雪朗峰，卢浮",
+                        "price":"9699" ,
+                        "hoverTips":"中瑞旅游年推荐 一价全含 奥特莱斯 雪朗峰 塞纳河游船 卢浮宫 "
+                    },
+                     {
+                        "id":"3",
+                        "toKey":"1",
+                        "img":"/static/39.jpeg",
+                        "name":"[五一]<法瑞意13日游>一价全含 林志颖同款 旅行家推荐 牛",
+                        "price":"15799" ,
+                        "hoverTips":"庄园酒店 少女峰 五渔村  意深 一价全含"
+                    },
+                     {
+                        "id":"4",
+                        "toKey":"1",
+                        "img":"/static/59.jpg",
+                        "name":"<奥地利德国瑞士10-12日游>部分团期15人，瑞士4天，一",
+                        "price":"15199" ,
+                        "hoverTips":"瓦豪风景区  4晚瑞士深度"
+                    },
+                     {
+                        "id":"5",
+                        "toKey":"1",
+                        "img":"/static/69.jpeg",
+                        "name":"[端午]<美国东西海岸+羚羊彩穴+黄石公园+尼亚加拉16天",
+                        "price":"26800" ,
+                        "hoverTips":"5大国家公园（黄石、大提顿、锡安、布莱斯、南峡），影胜地羚羊彩穴，马蹄湾，纽约升级一晚希尔顿酒店，拉斯入住4星酒店"
+                    },
+                      {
+                        "id":"6",
+                        "toKey":"1",
+                        "img":"/static/79.jpg",
+                        "name":"<海洋极光号-华人包船-南极+南美四国32日游>登陆长城",
+                        "price":"126800" ,
+                        "hoverTips":"南美4国深度 马丘比丘 复活节岛 伊瓜苏 火地岛 大地画 "
+                    },
+                      {
+                        "id":"7",
+                        "toKey":"1",
+                        "img":"/static/89.jpg",
+                        "name":"[五一]<美国东西海岸-夏威夷15-16日游>畅享美景，途牛",
+                        "price":"18299" ,
+                        "hoverTips":"南峡 大瀑布 夏威夷 拉斯维加斯 拉夫林 洛杉矶 华盛顿 费城 纽约 自由女神环岛游 普林斯顿大学 星光大道 好莱坞环球影城 旧都费城 woodbury Outlets购物 棕榈泉Outlets购物 圣地亚哥  美洲出游精选线路 酒店升级 部分城市指定酒店"
+                    },
+                      {
+                        "id":"8",
+                        "toKey":"1",
+                        "img":"/static/99.jpg",
+                        "name":"<美国东西海岸-加拿大-夏威夷-国家公园20-25日游>一次",
+                        "price":"28499" ,
+                        "hoverTips":"美加墨 国家公园 羚羊彩穴 夏威夷 全国联运 黄石"
+                    }
+                ],
+                "banner":"/static/pic1.jpg" 
+             }
+            ],
+        "hotSellers":[
+            {
+                "id":"1",
+                "name":"<美国东西海岸-加拿大-夏威夷-国家公园20-25日游>一次",
+                "img":"/static/99.jpg",
+                "key":"1",
+                "price":"28499"
+            },
+             {
+                "id":"2",
+                "name":"[五一]<美国东西海岸-夏威夷15-16日游>畅享美景，途牛",
+                "img":"/static/89.jpg",
+                "key":"2",
+                "price":"18299"
+            },
+             {
+                "id":"3",
+                "name":"<海洋极光号-华人包船-南极+南美四国32日游>登陆长城",
+                "img":"/static/79.jpg",
+                "key":"3",
+                "price":"126800"
+            },
+             {
+                "id":"4",
+                "name":"[端午]<美国东西海岸+羚羊彩穴+黄石公园+尼亚加拉16天",
+                "img":"/static/69.jpeg",
+                "key":"4",
+                "price":"26800"
+            },
+             {
+                "id":"5",
+                "name":"[五一]<法瑞意13日游>一价全含 林志颖同款 旅行家推荐 牛",
+                "img":"/static/39.jpeg",
+                "key":"5",
+                "price":"15799"
+            }
+        ],
+        "producelist":{
+             "key":"erriyou",
+            "title":"一日游",
+            "list":[
+                    {
+                        "id":"1",
+                        "img":"/static/11.jpeg",
+                        "title":"<南京中山陵-玄武湖-夫子庙1日游>合肥出发、含中餐，家庭游亲子游学生游均可，周末踏春美食休闲之旅、纯玩无购物 ",
+                        "key":"1",
+                        "point":" 及时确认",
+                        "price":"106",
+                        "trip":" D1合肥>南京",
+                        "reason":"★南京----距离合肥最近的六朝古都、周末休闲踏青城市游首选目的地！★本产品适合家庭游、亲子游、学生游！★游玄武湖、逛夫子庙、品金陵各色美食！"
+                    },
+
+                    {
+                        "id":"2",
+                        "img":"/static/21.jpg",
+                        "title":"<无锡太湖鼋头渚荷花季-太湖游船-三国城水浒城1日游>享评弹表演及无锡特色小礼品一份 纯玩0购物",
+                        "key":"2",
+                        "point":" 及时确认",
+                        "price":"237",
+                        "trip":"行程概要:D1上海>无锡",
+                        "reason":"1、游览5A级风景区三国水浒城 重回《三国演义》《水浒传》等影视作品拍摄地2、【鼋头渚】独占太湖风景最美一角 山清水秀 天然胜景"
+                    },
+                     {
+                        "id":"3",
+                        "img":"/static/14.jpg",
+                        "title":"<芜湖方特四期东方神画1日游>一个有故事的主题乐园 重磅回归 一票制 0购物 全园嗨翻天",
+                        "key":"3",
+                        "price":"185",
+                        "point":" 及时确认",
+                        "trip":"行程概要： D1南京>芜湖",
+                        "reason":"☆一个有故事的主题乐园；☆一票制畅玩，0购物，嗨翻天；☆端午期间，报名成人价格均可免费携带一名身高1.5m以下的儿童，此儿童免首道大门票。"
+                    },
+                     {
+                        "id":"4",
+                        "img":"/static/15.jpg",
+                        "title":"<南昌万达主题乐园1日游>含主题乐园大门票，专车专导，每人一瓶矿泉水",
+                        "key":"4",
+                        "price":"259",
+                        "point":" 及时确认",
+                        "trip":"行程概要：D1南昌>南昌万达主题乐园",
+                        "reason":"为打造一个具有本土特色的世界级主题乐园，万达斥巨资邀请世界排名第一的主题乐园设计公司福瑞克(Forrec)担纲设计、倾力打造，首度实现世界级主题乐园元素与中国传统文化的融合，多项设备全球专利、万达专属。电影乐园《飞跃江西》为飞行动感影院，配备悬空式球幕影院运动座椅、六声道音响配音，采用高分辨率球幕，高清晰度穹型画面，在烧瓷老人童宾带领下，观众被升至十五米的高空，同时球幕播放江西风景及文化。"
+                    },
+                     {
+                        "id":"5",
+                        "img":"/static/12.jpg",
+                        "title":"<惠东双月湾露营-出海捕鱼2日游>沙滩露营、烧烤BBQ、看日出、观沙滩狂舞音乐晚会",
+                        "key":"5",
+                        "price":"227",
+                        "point":" 及时确认",
+                        "trip":"行程概要： D1深圳>惠州>双月湾>沙滩戏水>烧烤>篝火晚会>住帐篷>D2双月湾>大星山>出海捕鱼>温馨的家",
+                        "reason":"1、观海浪：此线有两个沙滩，左湾水平如镜，右湾波涛汹涌,浪多且大，想拍海浪，来这里！2、无敌海景：观双月湾海的宁静、疯狂、温柔，在这里你都能看到！总之双月湾是一个让人无比向往的美丽地方3、坐渔船出海：海边还有渔船，可以三五成群邀在一起叫条船一起去出海游船，感受渔家出海捕鱼风情4、此线路适合情侣、家庭游带孩子漫步"
+                    },
+                     {
+                        "id":"6",
+                        "img":"/static/16.jpg",
+                        "title":"<千岛湖-中心湖-1日游>含215元门票游船 含往返车费 登梅峰观岛、渔乐岛、龙山岛 纯玩无购物",
+                        "key":"6",
+                        "price":"299",
+                        "point":" 及时确认",
+                        "trip":"行程概要： D1杭州>千岛湖",
+                        "reason":"★门票游船全含，无购物，特价首发。★千岛湖好山水，畅游千岛湖，呼吸新鲜空气"
+                    },
+                     {
+                        "id":"7",
+                        "img":"/static/17.jpg",
+                        "title":"<浙西-大明山1日游>含110元大门票 含往返车位 观千亩草甸 走千米栈道 万米岩洞 无购物 ",
+                        "key":"7",
+                        "price":"79",
+                        "point":" 及时确认",
+                        "trip":"行程概要： D1杭州>临安市",
+                        "reason":"★家门口的“小黄山”，含110元大门票。含往返车位，超值低价！★亲子朋友登高好去处，充实玩转一整天！"
+                    },
+                     {
+                        "id":"8",
+                        "img":"/static/18.jpg",
+                        "title":"<日照海滨森林公园-李家台赶海-奇趣海洋馆2日游>宿海滨森林公园内 可升级海边别墅 门票全含无购物 体验出海捕鱼乐趣 含沙滩玩具",
+                        "key":"8",
+                        "price":"288",
+                        "point":" 及时确认",
+                        "trip":"行程概要：D1南京>日照>D2日照>南京",
+                        "reason":"日出东方而先照，来场说走就走旅行;面朝大海春暖花开，观海、听涛、看日出;入住森林公园内长信度假村（别墅区），出行方便，吃玩更随心;海滨随心DIY，逛夜市、品海鲜、喝啤酒，吃货的天堂。"
+                    }
+                ]
+        },
+
+        
+        "detail":{
+                "category":"gty",
+                "key":3,
+                "productName":"【中秋】[韩国首尔-济州岛5日游]",
+                "productNum":"SHS152642",
+                "productImage":"/static/pic3.jpg",
+                "costPrice":"128",
+                "childPrice":"70",
+                "oldPrice":"198",
+                "tel":"4007-999-999",
+                "travelSelect":["请选择出发日期","11-10(周一)284元/人0元/儿童 ","11-11(周二)284元/人0元/儿童 ","11-12(周三)284元/人0元/儿童"],
+                "xlxc":"",
+
+                "fybh":"1.交通:往返团队或散客机票含税费（团队机票将统一出票，散客机票因实时计价预定后即刻出票）,当地旅游巴士 2.住宿:行程所列酒店。3.用餐:行程中团队标准用餐（中式餐或自助餐或特色餐，含飞机上用餐，自由活动期间用餐请自理；如因自身原因放弃用餐，则餐费不退）。 4.门票:行程中所含的景点首道大门票，具体请参考行程描述。 5.导服:专职领队和当地中文导游，竭诚为您服务。6.儿童价标准:年龄1~12周岁（不含），不占床，其他标准同成人。7.签证:团队旅游签证(元/人)。",
+
+               "fybh":"1.单房差:单房差（具体见团期报价）2.旅游意外险:旅游人身意外保险",
+
+                "jdsm":"1.用餐安排：韩国特色餐：韩式火锅、石锅拌饭等，升级3个特色餐：海鲜自助，烤肉自助，韩方老店人参鸡汤。2.住宿安排：韩国四花酒店住宿，升级两晚五花酒店 3.行程安排：天津韩亚国际航空直飞，当地旅游巴士4.游玩安排：乐天世界，南山公园，泰迪熊博物馆，清溪川等5.贴心赠送：特别赠送韩流大秀-涂鸦秀表演",
+                "ydlc":"1、登陆我社网站查看旅游线路，可通过电话或网上在线咨询我社客服，了解相关线路问题，选择好自已喜欢的旅游线路。2.我社客服人员接到您的预订信息后会与您确认好相关事项并为您做好接机/接车/接船等相关事宜，并给您发预定信息到您手机上；请保存好信息上联系方式，该客服将成为您的专属客服，以便随时与其联系。3.出发前一天晚上，我社指定车队接站工作人员将提前与您联系通知第二天接站时间（一般早上07：00左右接站），出发当天，将根据您提供的三亚接站地点准时接您与团队集合出发。<",
+                "qyfs":"在线签约：通过在线签约页面进行签约，付款成功后，将通过电子邮件接收电子版合同，与门市签约及传真签约同等有效。传真签约：双方在合同上签字盖章后，通过传真进行签约。如涉及签证材料需要快递，请在快件中注明订单号，以便工作人员及时处理。上门签约：为您提供上门签约收团款收出境材料服务。支持POS刷卡支付。上海外环区域以内10元/单，万元以上团款首次签约免服务费。具体详询客服人员。",
+                "fkfs":"如需提前支付团费的团友，可通过我社公司帐户、指定财务帐户汇款支付，汇款帐户请查看网站支款页面",
+                "serviceTipsTitle":"及时确认",
+                "serviceTipsDescription": "本产品价格、团期等信息已经过核实，在您完成付款签约后，即可出游",
+                "promiseTips":[
+                    {"id":"1","promiseTipsTitle":"认证商家","promiseTipsDescription":"认证商家资质"},
+                    {"id":"2","promiseTipsTitle":"24小时退款保证","promiseTipsDescription":"在消费者与供应商达成退款共识后，经旅行社核实退款申请无误且材料完整，1个工作日内完成退款操作（根据银行的不同会在3-15个工作日内到账）"},
+                    {"id":"3","promiseTipsTitle":"安全交易","promiseTipsDescription":"一旦网上预定并付款后，无自费项目，包括但不限于无附加费、无强迫自费项目，不收取任何特殊人群附加费"},
+                    {"id":"4","promiseTipsTitle":"无购物","promiseTipsDescription":"一旦网上预定并付款后，行程中无购物店（特殊路线除外），绝无强迫"},
+                    {"id":"5","promiseTipsTitle":"如实描述","promiseTipsDescription":"商家承诺与消费者在交易过程中利用400电话/TQ工具进行沟通时向消费者描述的内容真实有效"},
+                    {"id":"6","promiseTipsTitle":"未验证消费 随时退","promiseTipsDescription":"有效期内，未验证消费 随时退款"}
+                ]    
+            },
         "login": {
             "username": "admin",
             "userId": "123123",

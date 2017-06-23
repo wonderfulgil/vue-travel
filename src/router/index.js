@@ -46,13 +46,25 @@ const routes=[
         meta: { navShow: false }, 
     },
     { 
-        path: '/travelSearch/:category' ,
+        path: '/travelSearch/:keywords' ,
         component:travelSearch,
         title: '旅游搜索',
         meta: { navShow: false }, 
     },
     { 
-        path: '/travelmore/:category' ,
+        path: '/travelmore/:category/' ,
+        title: '旅游列表',
+        component:travelmore,
+        meta: { navShow: false }, 
+    },
+    { 
+        path: '/travelmore/:category/:key' ,
+        title: '旅游列表',
+        component:travelmore,
+        meta: { navShow: false }, 
+    },
+    { 
+        path: '/travelmore/:category/:key/:keywords' ,
         title: '旅游列表',
         component:travelmore,
         meta: { navShow: false }, 

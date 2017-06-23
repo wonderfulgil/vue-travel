@@ -10,7 +10,7 @@
 						<span :title="item.title">{{item.title}}</span>
 					</div>
 					<div class="menu-big-title">
-						<router-link v-for="two in item.twoLevel" :to="{path:'travelmore/'+two.key}" :key="two.id">{{two.title}}</router-link>
+						<router-link v-for="two in item.twoLevel" :to="{path:'travelmore/'+item.key+'/'+two.key}" :key="two.id">{{two.title}}</router-link>
 					</div>
 				</dt>
 				<dt class="jstb"><img src="../assets/icon/jstb.gif"></dt>
@@ -23,7 +23,7 @@
 									<span :title="item.title">{{item.title}}</span>
 								</div>
 								<div class="menu-big-title">
-									<router-link :to="{path:'travelmore/'+two.key}" v-for="two in item.twoLevel" :key="two.id">{{two.title}}</router-link>
+									<router-link :to="{path:'travelmore/'+item.key+'/'+two.key}" v-for="two in item.twoLevel" :key="two.id">{{two.title}}</router-link>
 								</div>
 							</dt>
 							<dt class="jstb"><img src="../assets/icon/jstb.gif"></dt>
@@ -33,7 +33,7 @@
 						<dl v-for="content in item.contents" :key="content.id">
 							<dt>{{content.title}}</dt>
 							<dd>				
-								<router-link :class="{hot: three.ishot}" :title="three.title" :to="{path:'travelmore/'+three.key}" v-for="three in content.threeLevel" :key="three.id">{{three.title}}</router-link>			
+								<router-link :class="{hot: three.ishot}" :title="three.title" :to="{path:'travelmore/'+item.key+'/'+content.key+'/'+three.key}" v-for="three in content.threeLevel" :key="three.id">{{three.title}}</router-link>			
 							</dd>
 						</dl>
 					</div>

@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{path: '/detail/'+ mycard.toKey}">
+    <router-link :to="{path:'/detail/'+ mycard.toKey}">
         <div class="card-picture">
             <img :src="mycard.img" width="224" height="157">
         </div>

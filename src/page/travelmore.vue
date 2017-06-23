@@ -2,7 +2,7 @@
 <div class="wrapper main clearfix">
     <div class="travel-list">
         <div class="search-condition">
-            <h2><span>{{title}}</span></h2>
+            <h2><span>{{producelist.title}}</span></h2>
             <ul>
                 <li>
                     <dl>
@@ -24,7 +24,7 @@
         </div>
         <div class="searchresult">
             <ul>
-                <li v-for="item in producelist" :key="item.id">
+                <li v-for="item in producelist.list" :key="item.id">
                     <div class="hot-ico"></div>
                     <div class="clearfix">
                         <div class="result-img"><img :src="item.img" :title="item.title" :alt="item.title" width="210" height="158"></div>
@@ -44,7 +44,7 @@
                             </dl>
                         </div>
                         <div class="result-price">
-                            <div class="price"><b>￥</b><em>6650</em>起</div>
+                            <div class="price"><b>￥</b><em>{{item.price}}</em>起</div>
                             <router-link :to="{path:'/detail/'+item.key}" class="btn-go">去看看</router-link>
                         </div>
                     </div>
@@ -63,64 +63,29 @@ export default {
     },
 	data(){
 	 	return{ 
-                "activeIndex":"",
-                "onIndex":"",
-                "key":"3",
-                "title":"中部西南区",
-                "selectprice":[
-                     {"id":"1","name":"全部",},
-                     {"id":"2","name":"100元以下"},
-                     {"id":"3","name":"300元以下"},
-                     {"id":"4","name":"500元以下"},
-                     {"id":"5","name":"100元以下"}
-                ],
-                "selectdays":[
-                    {"id":"1","name":"全部"},
-                    {"id":"2","name":"1-3天"},
-                    {"id":"3","name":"5-7天"},
-                    {"id":"4","name":"7-14天"}
-                ],
-                "producelist":[
-                    {
-                        "id":"1",
-                        "img":require('@/assets/pic3.jpg'),
-                        "title":"人间仙境-喀纳斯湖、禾木村、可可托海5日",
-                        "key":"1",
-                        "point":" 及时确认",
-                        "trip":"D1 大象村骑大象 > 丝绸生产",
-                        "reason":"华东段【行程特色】：旅程舒适，价格实惠，堪称性价比最高行程！带您畅游江南美景！【住宿特色】：全程入住商务酒店，经济舒适，花最合适的钱，住最舒服的宾馆【餐饮特色】：随餐赠送特色菜“盐水鸭、无锡酱排骨、西湖醋鱼、梅干菜烧肉”让您了解..."
-                    },
-                    {
-                        "id":"2",
-                        "img":require('@/assets/pic3.jpg'),
-                        "title":"人间仙境-喀纳斯湖、禾木村、可可托海5日",
-                        "key":"2",
-                        "point":" 及时确认",
-                        "trip":"D1 大象村骑大象 > 丝绸生产",
-                        "reason":"华东段【行程特色】：旅程舒适，价格实惠，堪称性价比最高行程！带您畅游江南美景！【住宿特色】：全程入住商务酒店，经济舒适，花最合适的钱，住最舒服的宾馆【餐饮特色】：随餐赠送特色菜“盐水鸭、无锡酱排骨、西湖醋鱼、梅干菜烧肉”让您了解..."
-                    },
-                     {
-                        "id":"3",
-                        "img":require('@/assets/pic3.jpg'),
-                        "title":"人间仙境-喀纳斯湖、禾木村、可可托海5日",
-                        "key":"3",
-                        "point":" 及时确认",
-                        "trip":"D1 大象村骑大象 > 丝绸生产",
-                        "reason":"华东段【行程特色】：旅程舒适，价格实惠，堪称性价比最高行程！带您畅游江南美景！【住宿特色】：全程入住商务酒店，经济舒适，花最合适的钱，住最舒服的宾馆【餐饮特色】：随餐赠送特色菜“盐水鸭、无锡酱排骨、西湖醋鱼、梅干菜烧肉”让您了解..."
-                    },
-                     {
-                        "id":"4",
-                        "img":require('@/assets/pic3.jpg'),
-                        "title":"人间仙境-喀纳斯湖、禾木村、可可托海5日",
-                        "key":"4",
-                        "point":" 及时确认",
-                        "trip":"D1 大象村骑大象 > 丝绸生产",
-                        "reason":"华东段【行程特色】：旅程舒适，价格实惠，堪称性价比最高行程！带您畅游江南美景！【住宿特色】：全程入住商务酒店，经济舒适，花最合适的钱，住最舒服的宾馆【餐饮特色】：随餐赠送特色菜“盐水鸭、无锡酱排骨、西湖醋鱼、梅干菜烧肉”让您了解..."
-                    }
-
-                ]
-	 	     }
-	   },
+            "activeIndex":"",
+            "onIndex":"",
+            "currentPath":"",
+            "selectprice":[
+                 {"id":"1","name":"全部",},
+                 {"id":"2","name":"100元以下"},
+                 {"id":"3","name":"300元以下"},
+                 {"id":"4","name":"500元以下"},
+                 {"id":"5","name":"100元以下"}
+            ],
+            "selectdays":[
+                {"id":"1","name":"全部"},
+                {"id":"2","name":"1-3天"},
+                {"id":"3","name":"5-7天"},
+                {"id":"4","name":"7-14天"}
+            ],
+            "producelist":[ ]
+ 	  }
+	},
+    created () {
+            this.currentPath=this.$route.path;
+            this.getPosts();
+    },
     methods: {
         select(index){
             this.activeIndex=index,
@@ -132,14 +97,23 @@ export default {
         },
         go(){
             if(this.onIndex==0&&this.activeIndex==0){
-                this.$router.push({path:'/travelmore/'+this.key})
+                this.$router.push({path:this.currentPath})
             }else if(this.activeIndex==0&&this.onIndex!==0){
-                this.$router.push({path:'/travelmore/'+this.key,query:{days:this.selectdays[this.onIndex].name}})
+                this.$router.push({path:this.currentPath,query:{days:this.selectdays[this.onIndex].name}})
             }else if(this.onIndex==0&&this.activeIndex!==0){
-                this.$router.push({path:'/travelmore/'+this.key,query:{price:this.selectprice[this.activeIndex].name}})
+                this.$router.push({path:this.currentPath,query:{price:this.selectprice[this.activeIndex].name}})
             }else{
-                this.$router.push({path:'/travelmore/'+this.key,query:{price:this.selectprice[this.activeIndex].name,days:this.selectdays[this.onIndex].name}})
+                this.$router.push({path:this.currentPath,query:{price:this.selectprice[this.activeIndex].name,days:this.selectdays[this.onIndex].name}})
             }
+        },
+        getPosts() {
+          this.$axios.get('/api/producelist',{params: {category:this.$route.params.category,key:this.$route.params.key}}).then((res) => {
+            this.producelist=res.data
+          })
+          .catch((error) => {
+                //error
+                console.log(error);
+            })
         }
     }
 

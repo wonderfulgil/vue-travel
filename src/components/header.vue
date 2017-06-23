@@ -72,12 +72,14 @@ export default {
 	      this.onCloseLogin (),
 	      window.localStorage.username=data.username,
 	      this.username=window.localStorage.username,
-	      window.localStorage.usertoken=data.usertoken
+	      window.localStorage.usertoken=data.usertoken,
+	      window.localStorage.userId=data.userId
 	      //console.log(window.localStorage.usertoken,window.localStorage.username)
 	    },
 	    onLoginOut(){
 	    	window.localStorage.username="",
 	    	window.localStorage.removeItem("usertoken"),
+	    	window.localStorage.removeItem("userId"),
 	    	this.username=window.localStorage.username
 	    	//console.log(window.localStorage.usertoken,window.localStorage.username)
 	    	if (!this.$route.meta.requireAuth) {

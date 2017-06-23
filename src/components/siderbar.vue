@@ -5,15 +5,15 @@
             <ul>
                 <li v-for="(item,index) in hotSellers" @mouseover="select(index)" :class="{on:m==index}" :key="item.id">
                     <p class="number">{{index+1}}</p>
-                    <router-link :to="{path:'/detail/'+item.key}" class="list-tit">{{item.name}}</router-link>
+                    <a :href="'/detail/'+item.key" class="list-tit">{{item.name}}</a>
                     <dl>
                         <dt>
-                            <router-link :to="{path:'/detail/'+item.key}">
+                            <a :href="'/detail/'+item.key">
                               <img :alt="item.name " :src="item.img" width="100" height="68">
-                            </router-link>
+                            </a>
                         </dt>
                         <dd>
-                            <h3><router-link :to="{path:'/detail/'+item.key}">{{item.name}} </router-link></h3>
+                            <h3><a :href="'/detail/'+item.key">{{item.name}} </a></h3>
                             <p><em>￥{{item.price}}</em>起</p>
                         </dd>
                     </dl>
@@ -24,53 +24,29 @@
 </template>
 <script>
 export default {
-  data () {
-    return {
-        hotSellers:[
-            {
-                "id":"1",
-                "name":"泰超值-曼谷、芭提雅8日",
-                "img":require('@/assets/pic3.jpg'),
-                "key":"1",
-                "price":"28"
-            },
-             {
-                "id":"2",
-                "name":"泰超值-曼谷、芭提雅8日",
-                "img":require('@/assets/pic3.jpg'),
-                "key":"2",
-                "price":"28"
-            },
-             {
-                "id":"3",
-                "name":"泰超值-曼谷、芭提雅8日",
-                "img":require('@/assets/pic3.jpg'),
-                "key":"3",
-                "price":"28"
-            },
-             {
-                "id":"4",
-                "name":"泰超值-曼谷、芭提雅8日",
-                "img":require('@/assets/pic3.jpg'),
-                "key":"4",
-                "price":"28"
-            },
-             {
-                "id":"5",
-                "name":"泰超值-曼谷、芭提雅8日",
-                "img":require('@/assets/pic3.jpg'),
-                "key":"5",
-                "price":"28"
-            }
-        ],
-        m:''
+    data () {
+        return {
+            hotSellers:[],
+            m:''
+        }
+    },
+    created () {
+        this.getPosts()
+    },
+    methods: {
+        getPosts() {
+          this.$axios.get('/api/hotSellers').then((res) => {
+            this.hotSellers=res.data
+          })
+          .catch((error) => {
+                //error
+                console.log(error);
+            })
+        },
+        select(index){
+            this.m=index
+        }
     }
-  },
-  methods: {
-    select(index){
-        this.m=index
-    }
-  }
 }
 </script>
 <style scoped>

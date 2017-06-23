@@ -3,8 +3,11 @@
 		<div class="nav-inner">
 			<navMenu class="left" v-show="$route.meta.navShow"></navMenu>
 			<ul class="nav-bar">
-				<li v-for="nav in navs" :key="nav.id">
-					<router-link :to="{path:nav.url}" active-class="active">{{nav.title}}</router-link>
+				<li>
+					<router-link :to="{path:'/index'}" active-class="active">首页</router-link>
+				</li>
+				<li v-for="(nav,index) in navs" :key="nav.id">
+					  <a :href="nav.url" :class="{active:IsactiveId==index}">{{nav.title}}</a>
 				</li>
 			</ul>
 		</div>
@@ -16,25 +19,53 @@
 		data(){
 			return{
 				navs:[],
+				IsactiveId:null
 			}
 		},
 		components: {
-		   	'navMenu':navMenu,
+		   	'navMenu':navMenu
 	  	}, 
-		created () {
-		    this.getPosts();
+		mounted () {
+		    this.getPosts()
 		},
 		methods: {
 		    getPosts() {
 		      this.$axios.get('/api/navs').then((res) => {
-		      	this.navs=res.data
+		      	this.navs=res.data,
+		      	this.navHeight()
 		      })
 		      .catch((error) => {
                     //error
-                    console.log(error);
+                    console.log(error)
                 })
-		    }
-		},
+		    },
+		    navHeight(){
+		    	if(!this.$route.params) return	
+                let navOn=this.$route.params.category;
+                for (var i in this.navs)
+                {
+                     this.navs[i].index=i
+                     if(this.navs[i].url.indexOf(navOn)>-1){    
+                        console.log(this.navs[i].index);
+                        this.IsactiveId=this.navs[i].index
+
+                     }
+                }   
+            }
+        },
+        computed:{
+        	 routerOn:function(){
+		        return this.$route.path
+		     }
+        },
+        watch: {
+            routerOn: function(val,oldval) {
+               if(val!=oldval){
+               	this.IsactiveId=null
+               }
+            }
+		    
+		}
 	}
 </script>
 <style type="text/css" scoped>

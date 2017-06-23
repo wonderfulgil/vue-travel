@@ -85,7 +85,7 @@ export default {
     },
     methods: {
         getPosts() {
-          this.$axios.get('/api/userInfo').then((res) => {
+          this.$axios.get('/api/userInfo',{params: {userId:localStorage.userId,usertoken:localStorage.usertoken}}).then((res) => {
             this.userInfo=res.data
           })
           .catch((error) => {

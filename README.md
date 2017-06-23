@@ -36,4 +36,13 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 vue2 + vue-router + Express+webpack +axios
 
+## 第二次修改
+
+1.新增了大量的假数据
+2.再次对路由做了优化
+3.不同的分类页赋予不同数据
+4.详情页:对下拉菜单进一步优化，完成点击数据后或者离开下拉菜单后关闭下拉菜单
+5.详情页:新增导航跟随滚动功能(未完)
+
+
 

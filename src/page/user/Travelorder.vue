@@ -35,7 +35,7 @@ export default {
     },
     methods:{
         getPosts() {
-            this.$axios.get("/api/orderList").then((res) => {
+            this.$axios.get("/api/orderList",{params: {userId:localStorage.userId,usertoken:localStorage.usertoken}}).then((res) => {
                     this.orderList=res.data
             })
             .catch((error) => {
