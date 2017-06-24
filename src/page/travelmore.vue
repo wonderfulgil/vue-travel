@@ -24,7 +24,7 @@
         </div>
         <div class="searchresult">
             <ul>
-                <li v-for="item in producelist.list" :key="item.id">
+                <li v-for="item in producelist.list" :key="item.id" v-if="pricemax>item.price&&item.price>=pricemin&&daymax>item.day&&item.day>=daymin">
                     <div class="hot-ico"></div>
                     <div class="clearfix">
                         <div class="result-img"><img :src="item.img" :title="item.title" :alt="item.title" width="210" height="158"></div>
@@ -66,12 +66,16 @@ export default {
             "activeIndex":"",
             "onIndex":"",
             "currentPath":"",
+            "pricemin":"",
+            "pricemax":"Number.NEGATIVE_INFINITY",
+            "daymin":"",
+            "daymax":"Number.NEGATIVE_INFINITY",
             "selectprice":[
                  {"id":"1","name":"全部",},
-                 {"id":"2","name":"100元以下"},
-                 {"id":"3","name":"300元以下"},
-                 {"id":"4","name":"500元以下"},
-                 {"id":"5","name":"100元以下"}
+                 {"id":"2","name":"0-100元"},
+                 {"id":"3","name":"100-300元"},
+                 {"id":"4","name":"300-500元"},
+                 {"id":"5","name":"500元以上"}
             ],
             "selectdays":[
                 {"id":"1","name":"全部"},
@@ -80,19 +84,35 @@ export default {
                 {"id":"4","name":"7-14天"}
             ],
             "producelist":[ ]
- 	  }
+ 	    }
 	},
     created () {
-            this.currentPath=this.$route.path;
-            this.getPosts();
+        this.currentPath=this.$route.path;
+        this.getPosts();
     },
     methods: {
         select(index){
-            this.activeIndex=index,
+            this.activeIndex=index;
+            if(this.selectprice[index].name=="全部"){
+                this.pricemin=0;
+                this.pricemax="Number.NEGATIVE_INFINITY";
+            }else{
+                this.pricemin=parseInt(this.selectprice[index].name);
+                this.pricemax=parseInt(this.selectprice[index].name.split("-")[1]);
+                if(isNaN(this.pricemin)) this.pricemin=0;
+                if(isNaN(this.pricemax)) this.pricemax="Number.NEGATIVE_INFINITY";
+            }
             this.go()
         },
         collect(index){
-            this.onIndex=index,
+            this.onIndex=index;
+            if(this.selectdays[index].name=="全部"){
+                this.daymin=0;
+                this.daymax="Number.NEGATIVE_INFINITY";
+            }else{
+               this.daymin=parseInt(this.selectdays[index].name);
+               this.daymax=parseInt(this.selectdays[index].name.split("-")[1]);
+            }
             this.go()
         },
         go(){
@@ -116,7 +136,6 @@ export default {
             })
         }
     }
-
 }
 </script>
 <style type="text/css">

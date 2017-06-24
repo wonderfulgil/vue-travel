@@ -4,7 +4,7 @@
         <h2 class="search-tit"><span>搜索结果</span></h2>  
         <div class="searchresult">
             <ul>
-                <li v-for="item in producelist" :key="item.id">
+                <li v-for="item in producelist.list" :key="item.id">
                     <div class="hot-ico"></div>
                     <div class="clearfix">
                         <div class="result-img"><img :src="item.img" :title="item.title" :alt="item.title" width="210" height="158"></div>
@@ -45,8 +45,7 @@ export default {
     },
 	data(){
 	 	return{ 
-                "producelist":[
-                ]
+                "producelist":{}
 	 	}
 	},
     created () {
@@ -54,7 +53,7 @@ export default {
     },
     methods: {
         getPosts() {
-          this.$axios.get('/api/producelist').then((res) => {
+          this.$axios.get('/api/producelist',{params: {kewords:this.$route.params.kewords}}).then((res) => {
             this.producelist=res.data
           })
           .catch((error) => {

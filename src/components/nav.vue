@@ -46,7 +46,7 @@
                 {
                      this.navs[i].index=i
                      if(this.navs[i].url.indexOf(navOn)>-1){    
-                        console.log(this.navs[i].index);
+                        //console.log(this.navs[i].index);
                         this.IsactiveId=this.navs[i].index
 
                      }
