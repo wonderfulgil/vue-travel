@@ -46,7 +46,7 @@
     </div>
     <div class="product-nav" ref="nav" :class="[navOn?navFixed:navstatic]">
        <ul class="clearfix">
-            <li :class="{on:activeid==index}" v-for="(item,index) in navmnens"><a href="javascript:;" @click="light(index)">行程介绍</a></li>
+            <li :class="{on:activeid==index}" v-for="(item,index) in navmnens"><a href="javascript:;" @click="light(index)">{{item}}</a></li>
         </ul>
     </div>
     <div class="product-xxxm">
@@ -54,7 +54,7 @@
         <div class="product-xxxq" v-html="detail.xlxc"> </div>
     </div>
     <div class="product-xxxm">
-        <h2><i></i><span>费应包含</span></h2>
+        <h2><i></i><span>费用说明</span></h2>
         <div class="product-xxxq">
             <div class="product-xxtit">费应包含</div>
             <div v-html="detail.fybh"></div>
@@ -91,14 +91,16 @@
         }, 
         data(){
             return{ 
-                activeIndex:'0',
-                aultNum:'1',
-                childNum:'0',
+                aultNum:1,
+                childNum:1,
+                activeIndex:0,
                 navOn:false,
                 navFixed:'navFixed',
                 navstatic:'navstatic',
-                navH:'', 
-                navmnens:["行程介绍","费用包含","接待说明","预订流程及付款方式"],
+                navOT:'', 
+                navH:'',
+                distance:[],
+                navmnens:["行程介绍","费用说明","接待说明","预订流程及付款方式"],
                 activeid:'',
                 scrolled: '',
                 detail:{}
@@ -111,8 +113,7 @@
         methods:{
             getPosts() {
               this.$axios.get('/api/detail',{params: {productId:this.$route.params.id}}).then((res) => {
-                this.detail=res.data;
-                this.navH=this.$refs.nav.offsetTop;
+                this.detail=res.data
               })
               .catch((error) => {
                     //error
@@ -122,11 +123,12 @@
             onOrderProduct(){
                 if(this.activeIndex==0){
                     alert('请先选择价格')
-                }else if (localStorage.usertoken) {
+                }else 
+                if (localStorage.usertoken) {
                     // 登录是否过期,不过期
                     console.log('当前登录'),
                     this.$axios.post('/api/order', { 'price': this.detail.travelSelect[this.activeIndex], 'productkey': this.detail.key,'userusertoken':localStorage.usertoken,"aultNum":this.aultNum,'childNum':this.childNum}).then((res) => {
-                        this.$router.push({path: '/travelOrder/'+this.key})
+                        this.$router.push({path: '/travelOrder/'+this.detail.key})
                     })
                     .catch((error) => {
                             //error
@@ -147,21 +149,49 @@
             getChildNum(msg){
                 this.childNum=msg
             },
+            //导航相对内容的offsetTop
+            navabout(){
+                let content = document.querySelectorAll('.product-xxxm');
+                let distance=[];
+                for(let i=0;i<content.length;i++){
+                    distance.push(content[i].offsetTop);
+                }
+                this.distance=distance;
+            },
+            //滚动事件
             navHight(){
-                this.scrolled =document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-                let fixed=this.scrolled >=this.navH;
-                if(fixed){
+                this.scrolled=document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+                let scrollHN=this.scrolled+this.navH;
+                if(this.scrolled >=this.navOT){
                     this.navOn=true
                 }else{
                     this.navOn=false
-                }
+                };
+                //滚动导航高亮??????Cannot create property 'on' on number '969'
+                for(let i = this.distance.length - 1; i >= 0; i--){
+                   this.distance[i].on=i   
+                    if (scrollHN >= this.distance[i]) {
+                       this.ativeid=this.distance[i].on
+                   }
+                };
+                //console.log(this.navOT,this.navH,this.scrolled, document.body.scrollTop)   
             },
+            //导航点击高亮，滚动相应位置
             light(index){
+                //导航点击高亮
                 this.activeid=index;
+                //滚动相应位置
+                document.body.scrollTop = this.distance[index]-this.navH;
+                document.documentElement.scrollTop =this.distance[index]-this.navH;
+                window.pageYOffset = this.distance[index]-this.navH;
+                //console.log(this.navOT,this.navH,this.scrolled, document.body.scrollTop)           
             }
         },
-         mounted () {
-            window.addEventListener('scroll', this.navHight)
+        mounted () {
+            this.navOT=this.$refs.nav.offsetTop;
+            this.navH=this.$refs.nav.offsetHeight;
+            this.navabout();
+            window.addEventListener('scroll', this.navHight);
         }  
 
     }

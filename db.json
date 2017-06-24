@@ -795,7 +795,7 @@
                         "hoverTips":"体验出海捕鱼乐趣 含沙滩玩具 "
                     }
                 ],
-                "banner":"/static/pic1.jpg" 
+                "banner":"/static/picbanner.jpg" 
              },
              {
                 "id":"2",
@@ -874,7 +874,7 @@
                         "hoverTips":"古镇古城、名山胜水、城市观光"
                     }
                 ],
-                "banner":"/static/pic1.jpg" 
+                "banner":"/static/picbanner.jpg" 
              },
              {
                 "id":"3",
@@ -953,7 +953,7 @@
                         "hoverTips":"上海直飞，正航班，全程0自费,2晚市区4星级酒店+1晚黄金海岸酒店入住"
                     }
                 ],
-                "banner":"/static/pic1.jpg" 
+                "banner":"/static/picbanner.jpg" 
              }
             ],
         "travel-domestic":[
@@ -1033,7 +1033,7 @@
                         "hoverTips":"珠峰大本营帐蓬住宿一晚"
                     }
                 ],
-                "banner":"/static/pic1.jpg" 
+                "banner":"/static/picbanner.jpg" 
              },
              {
                 "id":"2",
@@ -1111,7 +1111,7 @@
                         "hoverTips":"赠送一晚温泉酒店+梦幻腾冲"
                     }
                 ],
-                "banner":"/static/pic1.jpg" 
+                "banner":"/static/picbanner.jpg" 
              },
              {
                 "id":"3",
@@ -1188,7 +1188,7 @@
                         "hoverTips":"kt 免行李搬运之忧，升级特色餐，轻松行程更舒心"
                     }
                 ],
-                "banner":"/static/pic1.jpg" 
+                "banner":"/static/picbanner.jpg" 
              }
             ],
         "travel-selftrip":[
@@ -1269,7 +1269,7 @@
                         "hoverTips":"鹰航直飞、蔚蓝巴厘、蜜月之旅  "
                     }
                 ],
-                "banner":"/static/pic1.jpg" 
+                "banner":"/static/picbanner.jpg" 
              },
              {
                 "id":"2",
@@ -1347,7 +1347,7 @@
                         "hoverTips":"昆明丽江6晚7日自由行"
                     }
                 ],
-                "banner":"/static/pic1.jpg" 
+                "banner":"/static/picbanner.jpg" 
              }
             ],
         "travel-abroad":[
@@ -1429,7 +1429,7 @@
                         "hoverTips":"人文风光 含服务费 无自费 飞越珠峰 "
                     }
                 ],
-                "banner":"/static/pic1.jpg" 
+                "banner":"/static/picbanner.jpg" 
              },
              {
                 "id":"2",
@@ -1508,7 +1508,7 @@
                         "hoverTips":"两国深度全景 吉萨金字塔群 埃及博物馆 红海两晚度假 希林杰小镇 地下城 "
                     }
                 ],
-                "banner":"/static/pic1.jpg" 
+                "banner":"/static/picbanner.jpg" 
              },
              {
                 "id":"3",
@@ -1587,7 +1587,7 @@
                         "hoverTips":"美加墨 国家公园 羚羊彩穴 夏威夷 全国联运 黄石"
                     }
                 ],
-                "banner":"/static/pic1.jpg" 
+                "banner":"/static/picbanner.jpg" 
              }
             ],
         "hotSellers":[

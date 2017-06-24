@@ -1,5 +1,5 @@
 <template>
-	<div class="select" v-on:mouseenter="enterChange" v-on:mouseleave="leaveChange">
+	<div class="select" @mouseenter="enterChange" @mouseleave="leaveChange">
         <p class="select-result">
             <span :class="{black:isHight}">{{ selector[nowIndex]}}</span>
             <i :class="[isActive ? xxsj:xssj]"></i>
@@ -17,7 +17,7 @@
               isHight:false,
               xxsj:"boder_xxsj",
               xssj:"boder_xssj",
-              nowIndex: "0"
+              nowIndex: 0
         	}
         },
         props: ["selector"],
@@ -25,7 +25,8 @@
             show(index){
                 this.nowIndex = index,
                 this.isHight=true,
-                this.$emit("onChange",this.nowIndex)
+                this.$emit("onChange",this.nowIndex),
+                console.log(this.nowIndex);
                 this.leaveChange()
             },
             enterChange(){
@@ -94,5 +95,8 @@
     }
     .select-bar li:hover {
         background: #f8f8f8;
+    }
+    .black {
+        color: #333;
     }
 </style>
