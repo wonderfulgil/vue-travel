@@ -20,13 +20,16 @@
               nowIndex: 0
         	}
         },
-        props: ["selector"],
+        props:{
+            selector:{
+              default: "请选择出发日期"
+            }
+        },
         methods: {
             show(index){
                 this.nowIndex = index,
                 this.isHight=true,
                 this.$emit("onChange",this.nowIndex),
-                console.log(this.nowIndex);
                 this.leaveChange()
             },
             enterChange(){

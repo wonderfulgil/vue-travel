@@ -51,30 +51,30 @@
     </div>
     <div class="product-xxxm">
         <h2><i></i><span>行程介绍</span></h2>
-        <div class="product-xxxq" v-html="detail.xlxc"> </div>
+        <div class="product-xxxq" v-html="xlxc"> </div>
     </div>
     <div class="product-xxxm">
         <h2><i></i><span>费用说明</span></h2>
         <div class="product-xxxq">
             <div class="product-xxtit">费应包含</div>
-            <div v-html="detail.fybh"></div>
+            <div v-html="fybh"></div>
             <div class="product-xxtit">费应不含</div>
-            <div v-html="detail.fybh"></div>
+            <div v-html="fybh"></div>
         </div>
     </div>
     <div class="product-xxxm">
         <h2><i></i><span>接待说明</span></h2>
-        <div class="product-xxxq" v-html="detail.jdsm"></div>
+        <div class="product-xxxq" v-html="jdsm"></div>
     </div>
     <div class="product-xxxm">
         <h2><i></i><span>预订流程及付款方式</span></h2>
         <div class="product-xxxq">
             <div class="product-xxtit">预订流程</div>
-            <div v-html="detail.ydlc"></div>
+            <div v-html="ydlc"></div>
             <div class="product-xxtit">签约方式</div>
-            <div v-html="detail.qyfs"></div>
+            <div v-html="qyfs"></div>
             <div class="product-xxtit">付款方式</div>
-            <div v-html="detail.fkfs"></div>
+            <div v-html="fkfs"></div>
         </div>              
     </div>
 </div>
@@ -91,9 +91,9 @@
         }, 
         data(){
             return{ 
-                aultNum:1,
-                childNum:1,
-                activeIndex:0,
+                aultNum:'1',
+                childNum:'1',
+                activeIndex:'0',
                 navOn:false,
                 navFixed:'navFixed',
                 navstatic:'navstatic',
@@ -101,14 +101,157 @@
                 navH:'',
                 distance:[],
                 navmnens:["行程介绍","费用说明","接待说明","预订流程及付款方式"],
-                activeid:'',
+                activeid:'0',
                 scrolled: '',
-                detail:{}
+                detail:{},
+                xlxc:'<div>第1天 </div>'+
+'                <div>'+
+'                    <dl>'+
+'                        <dt><em>天津</em></i><em>首尔</em></dt>'+
+'                        <dd>'+
+'                            <div>行程描述</div>'+
+'                            <div>各位贵宾按规定时间天津滨海机场集合，飞往韩国，参考航班时间（OZ328 10:15--13:00）达后，游览【南山公园+首尔N塔（不登塔）】（约40分钟）南山是韩国著名游览景点，热播韩剧《来自星星的你》中，千颂伊与教授在南山塔的餐厅吃饭和锁住情人锁的地方，曾经在无数韩剧中承担起浪漫桥段，是每一个到首尔的游客必去的观光地。前往【七星娱乐城】(游览时间约50分钟)之后欣赏【韩流秀——涂鸦秀（根据实际情况可以调整为其他同类表演秀）】（约90分钟）是韩国表演艺术界又出现了一颗值得世界瞩目的新星——DRAWING SHOW 。后入住酒店休息。</div>'+
+'                        </dd>'+
+'                        <dd>'+
+'                            <div>'+
+'                                <span>用餐 </span>'+
+'                                <span>早餐：自理 午餐：自理 晚餐：含</span>'+
+'                            </div>'+
+'                            <div>'+
+'                                <span>住宿</span>'+
+'                                <span>四花酒店住宿</span>'+
+'                            </div>'+
+'                        </dd>'+
+'                    </dl>'+
+'                </div>'+
+'            </div>'+
+'            <div>第2天</div>'+
+'            <div>'+
+'                <dl>'+
+'                    <dt>首尔 济州岛</dt>'+
+'                    <dd>'+
+'                        <div>行程描述</div>'+
+'                        <div>早餐后，游览大型市内游乐场【乐天世界】（约120分钟），乐天世界位于首尔市中心，其主题公园有惊险的娱乐设施、凉爽的溜冰场、巨大的散心湖、各种表演场、民俗博物馆等集娱乐参观为一体的娱乐场所。参观首尔标志之一的【清溪川】（约30分钟）,后赴机场直飞素有“韩国蜜月岛”之称的【济州岛】。抵达后观赏【龙头岩，龙渊】（约40分钟，在那里你能和海女的塑像合影留念）仿佛神话传说中的一条巨龙，屹立于波涛澎湃的海岸。晚餐后入住酒店休息。</div>'+
+'                    </dd>'+
+'                    <dd>'+
+'                        <div>'+
+'                            <span>用餐 </span>'+
+'                            <span>早餐：含 午餐：含 晚餐：含</span>'+
+'                        </div>'+
+'                        <div>'+
+'                            <span>住宿</span>'+
+'                            <span>四花酒店住宿</span>'+
+'                        </div>'+
+'                    </dd>'+
+'                </dl>'+
+'            </div>'+
+'            <div>'+
+'                <div>第3天 </div>'+
+'                <div>'+
+'                    <dl>'+
+'                        <dt>济州岛></dt>'+
+'                        <dd>'+
+'                            <div>行程描述</div>'+
+'                            <div>早餐后，前往【泰迪熊博物馆】（约60分钟）在这里可以看到由天然素材做成的泰迪熊，各式各样造型的泰迪熊，整个泰迪熊的制作过程以及作家的制作理念等，绝对让您不虚此行。游览待您自己去揭开谜底的【神奇之路】（约20分钟）。而后前往收集着济州独特的民俗文化的【城邑民俗村】（约60分钟）村中至今仍有村民居住，不妨前去拜访；后前往联合国教科文组织认定的自然文化遗产之一。参观【城山日出峰】远景拍照（约40分钟）。欣赏韩剧ALL IN拍摄地【涉地岬】（约45分钟）美丽的海岸风光，后前往体验【济州桔子园】（约60分钟）济州岛是韩国春天最先到来的地方，穿越油菜花，一幅完美春天的油画跃然眼前，令人陶醉。后前往参观济州岛人引以自豪的马术表演【蒙古马上秀】（约45分钟）。后入住酒店休息。</div>'+
+'                        </dd>'+
+'                        <dd>'+
+'                            <div>'+
+'                                <span>用餐 </span>'+
+'                                <span>早餐：含 午餐：含 晚餐：含</span>'+
+'                            </div>'+
+'                            <div>'+
+'                                <span>住宿</span>'+
+'                                <span>四花酒店住宿</span>'+
+'                            </div>'+
+'                        </dd>'+
+'                    </dl>'+
+'                </div>'+
+'            </div>  '+
+'            <div>'+
+'                <div>第4天 </div>'+
+'                <div>'+
+'                    <dl>'+
+'                        <dt>济州岛首尔</dt>'+
+'                        <dd>'+
+'                            <div>行程描述</div>'+
+'                            <div>早餐后，搭乘国内航班飞往首尔，【明洞】（约90分钟）或【东大门】（约90分钟），【乐天免税店】（约90分钟）或者【新罗免税店】（约90分钟），【东和免税店】（约90分钟）半日自由购物，指定时间集合，不允许脱团,及人参公卖局（约60分钟）/化妆品 （约60分钟）/土特产店（约60分钟）自由购物。随后安排【传统服饰体验+紫菜博物馆】（约40分钟），全团贵宾均将成为今天的最佳男女主角，换上古代传统的结婚礼服，于古色古香之传统韩屋式的场景内，愉快的捕捉美丽的倩影，之后学习制作由专人解说紫菜的功效及制作紫菜包饭的过程。晚餐享受正宗韩国料理自助烤肉。后入住酒店休息。</div>'+
+'                        </dd>'+
+'                        <dd>'+
+'                            <div>'+
+'                                <span用餐 </span>'+
+'                                <span>早餐：含 午餐：含 晚餐：含</span>'+
+'                            </div>'+
+'                            <div>'+
+'                                <span>住宿</span>'+
+'                                <span>四花酒店住宿</span>'+
+'                            </div>'+
+'                        </dd>'+
+'                    </dl>'+
+'                </div>'+
+'            </div>'+
+'            <div>'+
+'                <div>第5天 </div>'+
+'                <div>'+
+'                    <dl>'+
+'                        <dt>首尔 天津</dt>'+
+'                        <dd>'+
+'                            <div>行程描述</div>'+
+'                            <div>早餐后，参观建于1392年之朝鲜时代王宫——【景福宫】（约60分钟）景福宫是首尔规模最大、最古老的宫殿之一，是韩国封建社会后期的政治中心。【国立民俗博物馆】（约40分钟）位于景福宫内，是展示韩国的传统生活方式的地方，这里展示着相关的近4,000件民族资料，是韩国唯一全面展示民俗生活历史的国立综合博物馆。（景福宫遇周二公休，改去昌德宫或德寿宫）总统府—【青瓦台】（外观）（约20分钟）韩国政治中心青瓦台最显著的特征就是它的青瓦，主楼背靠北岳山，青瓦与曲线型的房顶相映成趣，非常漂亮。结束所有行程后，前往仁川国际机场，参考航班时间（OZ327 08:20-- 09:10）办理出境手续，返回天津滨海国际机场，结束美好旅行回到温暖的家。</div>'+
+'                        </dd>'+
+'                        <dd>'+
+'                            <div>'+
+'                                <span>用餐 </span>'+
+'                                <span>早餐：含 午餐：含 晚餐：含</span>'+
+'                            </div>'+
+'                            <div>'+
+'                                <span>住宿</span>'+
+'                                <span>四花酒店住宿</span>'+
+'                            </div>'+
+'                        </dd>'+
+'                    </dl>'+
+'                </div>',
+                fybh:'<div>1.交通:往返团队/散客机票含税费（团队机票将统一出票，散客机票因实时计价预定后即刻出票）,当地旅游巴士</div>'+
+'                    <div>2.住宿:行程所列酒店。</div>'+
+'                    <div>3.用餐:行程中团队标准用餐（中式餐或自助餐或特色餐，含飞机上用餐，自由活动期间用餐请自理；如因自身原因放弃用餐，则餐费不退）。</div>'+
+'                    <div>4.门票:行程中所含的景点首道大门票，具体请参考行程描述。</div>'+
+'                    <div>5.导服:专职领队和当地中文导游，竭诚为您服务。</div>'+
+'                    <div>6.儿童价标准:年龄1~12周岁（不含），不占床，其他标准同成人。</div>'+
+'                    <div>7.签证:团队旅游签证(元/人)。</div>',
+                fybh:' <div>1.单房差:单房差（具体见团期报价）。</div>'+
+'                    <div>2.旅游意外险:旅游人身意外保险</div>',
+
+                jdsm:' <div>1.用餐安排：韩国特色餐：韩式火锅、石锅拌饭等，升级3个特色餐：海鲜自助，烤肉自助，韩方老店人参鸡汤。</div>'+
+'                <div>2.住宿安排：韩国四花酒店住宿，升级两晚五花酒店</div>'+
+'                <div>3.行程安排：天津韩亚国际航空直飞，当地旅游巴士</div>'+
+'                <div>4.游玩安排：乐天世界，南山公园，泰迪熊博物馆，清溪川等</div>'+
+'                <div>2.住宿安排：韩国四花酒店住宿，升级两晚五花酒店</div>'+
+'                <div>3.行程安排：天津韩亚国际航空直飞，当地旅游巴士</div>'+
+'                <div>4.游玩安排：乐天世界，南山公园，泰迪熊博物馆，清溪川等</div>'+
+'                <div>2.住宿安排：韩国四花酒店住宿，升级两晚五花酒店</div>'+
+'                <div>3.行程安排：天津韩亚国际航空直飞，当地旅游巴士</div>'+
+'                <div>4.游玩安排：乐天世界，南山公园，泰迪熊博物馆，清溪川等</div>'+
+'                <div>2.住宿安排：韩国四花酒店住宿，升级两晚五花酒店</div>'+
+'                <div>3.行程安排：天津韩亚国际航空直飞，当地旅游巴士</div>'+
+'                <div>4.游玩安排：乐天世界，南山公园，泰迪熊博物馆，清溪川等</div>'+
+'                <div>5.贴心赠送：特别赠送韩流大秀-涂鸦秀表演</div>',
+                ydlc:' <div>1、登陆我社网站查看旅游线路，可通过电话或网上在线咨询我社客服，了解相关线路问题，选择好自已喜欢的旅游线路。</div>'+
+'                    <div>2.我社客服人员接到您的预订信息后会与您确认好相关事项并为您做好接机/接车/接船等相关事宜，并给您发预定信息到您手机上；请保存好信息上联系方式，该客服将成为您的专属客服，以便随时与其联系。</div>'+
+'                    <div>2.我社客服人员接到您的预订信息后会与您确认好相关事项并为您做好接机/接车/接船等相关事宜，并给您发预定信息到您手机上；请保存好信息上联系方式，该客服将成为您的专属客服，以便随时与其联系。</div>'+
+'                    <div>2.我社客服人员接到您的预订信息后会与您确认好相关事项并为您做好接机/接车/接船等相关事宜，并给您发预定信息到您手机上；请保存好信息上联系方式，该客服将成为您的专属客服，以便随时与其联系。</div>'+
+'                    <div>2.我社客服人员接到您的预订信息后会与您确认好相关事项并为您做好接机/接车/接船等相关事宜，并给您发预定信息到您手机上；请保存好信息上联系方式，该客服将成为您的专属客服，以便随时与其联系。</div>'+
+'                    <div>3.出发前一天晚上，我社指定车队接站工作人员将提前与您联系通知第二天接站时间（一般早上07：00左右接站），出发当天，将根据您提供的三亚接站地点准时接您与团队集合出发。</div>',
+                qyfs:' <div>在线签约：通过在线签约页面进行签约，付款成功后，将通过电子邮件接收电子版合同，与门市签约及传真签约同等有效。</div>'+
+'                    <div>传真签约：双方在合同上签字盖章后，通过传真进行签约。如涉及签证材料需要快递，请在快件中注明订单号，以便工作人员及时处理。</div>'+
+'                    <div>传真签约：双方在合同上签字盖章后，通过传真进行签约。如涉及签证材料需要快递，请在快件中注明订单号，以便工作人员及时处理。</div>'+
+'                    <div>传真签约：双方在合同上签字盖章后，通过传真进行签约。如涉及签证材料需要快递，请在快件中注明订单号，以便工作人员及时处理。</div>'+
+'                    <div>传真签约：双方在合同上签字盖章后，通过传真进行签约。如涉及签证材料需要快递，请在快件中注明订单号，以便工作人员及时处理。</div>'+
+'                    <div>上门签约：为您提供上门签约收团款收出境材料服务。支持POS刷卡支付。上海外环区域以内10元/单，万元以上团款首次签约免服务费。具体详询客服人员。</div>',
+                fkfs:' <div>如需提前支付团费的团友，可通过我社公司帐户、指定财务帐户汇款支付，汇款帐户请查看网站支款页面：</div>',
             }  
 
         },
         created () {
-            this.getPosts()
+            this.getPosts();
         },
         methods:{
             getPosts() {
@@ -156,7 +299,7 @@
                 for(let i=0;i<content.length;i++){
                     distance.push(content[i].offsetTop);
                 }
-                this.distance=distance;
+                this.distance=distance;  
             },
             //滚动事件
             navHight(){
@@ -167,31 +310,42 @@
                 }else{
                     this.navOn=false
                 };
-                //滚动导航高亮??????Cannot create property 'on' on number '969'
-                for(let i = this.distance.length - 1; i >= 0; i--){
-                   this.distance[i].on=i   
-                    if (scrollHN >= this.distance[i]) {
-                       this.ativeid=this.distance[i].on
+                for(let i = 0;i <=this.distance.length - 1; i ++){ 
+                    if (scrollHN>= this.distance[i]) {
+                        this.activeid=i; 
                    }
                 };
-                //console.log(this.navOT,this.navH,this.scrolled, document.body.scrollTop)   
             },
             //导航点击高亮，滚动相应位置
             light(index){
                 //导航点击高亮
                 this.activeid=index;
-                //滚动相应位置
-                document.body.scrollTop = this.distance[index]-this.navH;
-                document.documentElement.scrollTop =this.distance[index]-this.navH;
-                window.pageYOffset = this.distance[index]-this.navH;
-                //console.log(this.navOT,this.navH,this.scrolled, document.body.scrollTop)           
+                //滚动相应位置,点击事件过后会不起作用，是因为浏览器的滚动高度兼容性写法document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop，因此点击滚动到相应位置需进行下判断
+                if(document.body.scrollTop){
+                    document.body.scrollTop = this.distance[this.activeid]-this.navH;
+                    document.documentElement.scrollTop=0;
+                    window.pageYOffset=0;
+                } 
+                if(document.documentElement.scrollTop){
+                    document.documentElement.scrollTop =this.distance[this.activeid]-this.navH;
+                    document.body.scrollTop = 0;
+                    window.pageYOffset=0;
+                }
+                if(window.pageYOffset ){
+                     window.pageYOffset = this.distance[this.activeid]-this.navH;
+                     document.body.scrollTop =0;
+                    document.documentElement.scrollTop=0;
+                }        
             }
         },
         mounted () {
             this.navOT=this.$refs.nav.offsetTop;
             this.navH=this.$refs.nav.offsetHeight;
             this.navabout();
-            window.addEventListener('scroll', this.navHight);
+            this.$nextTick(function () {
+              window.addEventListener('scroll', this.navHight);
+            })
+
         }  
 
     }

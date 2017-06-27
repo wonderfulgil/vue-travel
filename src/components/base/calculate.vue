@@ -13,7 +13,11 @@ export default {
             counter:1,//记录input数值
 	 	}
 	},
-    props:["num"],//input数值的最小值
+    props:{
+        num:{
+            type:Number
+        }
+    },
     methods:{
         addNum: function() {
              return this.counter++;
